@@ -1,4 +1,48 @@
 baseURL: http://example.org/
 languageCode: de-de
-title: taskit
+title: Taskit
 theme: Eclectic
+
+author:
+  facebook: " https://facebook.com/example"
+  twitter: " https://twitter.com/example"
+  email: "contact@example.com"
+  name: "Taskit"
+  location: Berlin
+  phone: (0) 30 611 295 0
+  hours: "Mon-Fri 9:00 - 16:00"
+
+menu:
+  main:
+    - identifier: about
+      name: Über uns
+      url: /about  
+      weight: 100
+    - identifier: contact
+      name: Kontakt
+      url: /contact
+      weight: 200
+    - identifier: credits
+      name: Impressum
+      url: /credits
+      weight: 300 
+    - identifier: privacy
+      name: Datenschutz
+      url: /privacy
+      weight: 400
+    - identifier: terms
+      name: AGB's
+      url: /terms
+      weight: 500      
+params:
+  color: "#ff00ff"
+  copyright: "Copyright &copy; 2022 Taskit."
+  footer:
+    - title: Über uns
+      content: >
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    - title: Aktuelle Blog Posts
+      recents: blog
+      recentCount: 7
+    - title: Kontakt
+      contact: true  
