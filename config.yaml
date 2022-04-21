@@ -6,7 +6,7 @@ theme: Eclectic
 author:
   facebook: " https://facebook.com/example"
   twitter: " https://twitter.com/example"
-  email: "contact@example.com"
+  email: "info@taskit.de"
   name: "Taskit"
   location: Berlin
   phone: (0) 30 611 295 0
@@ -33,7 +33,15 @@ menu:
     - identifier: terms
       name: AGB's
       url: /terms
-      weight: 500      
+      weight: 500
+    - identifier: dummy1
+      name: dummy1
+      url: /dummy1
+      weight: 600
+    - identifier: dummy2
+      name: dummy2
+      url: /dummy2
+      weight: 700          
 params:
   color: "#ff00ff"
   copyright: "Copyright &copy; 2022 Taskit."
