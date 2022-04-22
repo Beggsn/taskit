@@ -34,13 +34,13 @@ menu:
       name: AGB's
       url: /terms
       weight: 500
-    - identifier: dummy1
-      name: dummy1
-      url: /dummy1
+    - identifier: rss
+      name: RSS
+      url: /rss
       weight: 600
-    - identifier: dummy2
-      name: dummy2
-      url: /dummy2
+    - identifier: blog
+      name: Blog
+      url: /blog
       weight: 700          
 params:
   color: "#ff00ff"

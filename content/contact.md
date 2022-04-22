@@ -25,5 +25,6 @@ Fax: +49 (0) 30 611 295 10
 
 __Wir freuen uns auf Ihre Kontaktaufnahme.__
 
+<!-- ![Bild](../image/logo.png) taskit logo -->
 
-
+ 
