@@ -1,0 +1,9 @@
+{
+  "name": "Taskit",
+  "short_name": "Taskit",
+  "start_url": "/",
+  "scope": "/",
+  "theme_color": "#ff00ff",
+  "background_color": "#ff00ff",
+  "display": "standalone"
+}
