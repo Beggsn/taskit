@@ -1,29 +1,22 @@
+# für Konvertierung der Config file in der command line
+# hugo convert toTOML <content file> oder 
+# hugo convert toJSON <content file> oder 
+# hugo convert toYAML <content file>
+
 baseURL: http://example.org/
 languageCode: de-de
 title: Taskit
 theme: Eclectic
 enableEmoji: true
-
-# Enabling inline HTML for Hugo’s Goldmark library
-markup:
- goldmark:
- renderer:
- unsafe: true
-
-#Enabling line number highlighting in Hugo
-markup:
- highlight:
- lineNos: true
-
+keywords: "taskit GmbH" 
 author:
   facebook: " https://facebook.com/example"
-  twitter: " https://twitter.com/example"
+  twitter: " https://twitter.com/taskitberlin"
   email: "info@taskit.de"
   name: "Taskit"
-  location: Berlin
+  location: "Berlin"
   phone: (0) 30 611 295 0
   hours: "Mon-Fri 9:00 - 16:00"
-
 menu:
   main:
     - identifier: about
@@ -55,11 +48,16 @@ menu:
       url: /blog
       weight: 700 
     - identifier: test
-      name: Test bed
+      name: Test Ecke
       url: /test
-      weight: 800      
+      weight: 800
+    - identifier: eclectic
+      name: Eclectic_Theme
+      url: /eclectic
+      weight: 900   
 params:
-  color: "#ff00ff"
+  # Farbcode  
+  color: "#639DAA"
   copyright: "Copyright &copy; 2022 Taskit."
   footer:
     - title: Über uns
@@ -70,4 +68,16 @@ params:
       recentCount: 7
     - title: Kontakt
       contact: true  
+  style: red
+  logo: /image/logo.png
 
+  recent_posts:
+    enable: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    lineNos: true
+enableEmoji: true

@@ -1,12 +1,26 @@
 ---
-title: "Testbed Code Syntax"
+title: "Test bed: code and syntax"
 date: 2022-04-22T09:43:20+02:00
+content:
+  - type: carousel
+    title: Neuheiten im Shop
+    items: 
+      - title: io-Nuts.BME280
+        content: Der BME280 ist ein Feuchtigkeitssensor, der speziell für mobile Anwendungen und Wearables entwickelt wurde, bei denen Größe und geringer Stromverbrauch wichtige Designparameter sind...
+      - title: io-Nuts.MMC5603
+        content: Halleffekt-/Magnetsensoren für Plattenmontage 30 G, Monolithic, High Performance, Low Cost 3-axis Magnetic Sensor...
+      - title: io-Nuts.DPS368
+        content: DPS368 ist ein miniaturisierter digitaler barometrischer Luftdrucksensor mit ultrahoher Präzision (±2 cm) und niedrigem Stromverbrauch, der sowohl Druck als auch Temperatur messen kann...
+      - title: io-Nuts.BMX160
+        content:  Der BMX160 ist ein sehr kleiner, stromsparender und rauscharmer absoluter Orientierungssensor, der für den Einsatz in tragbaren Geräten entwickelt wurde...
+      - title: io-Nuts.OPT3002
+        content: Der Licht-zu-Digital-Sensor OPT3002 von Texas Instruments bietet die Funktion eines optischen Lichtleistungsmessers in nur einer Komponente...
 draft: false
 ---
 
-Copyright &copy
-Trademark &trade
+Copyright&copy;
 
+Trademark&trade;
 
 Ein Link zu [Emojis](https://unicode.org/emoji/charts/full-emoji-list.html/) :smile: 
 
@@ -82,16 +96,15 @@ __Lorem Ipsum__
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et **3 dolore** magna aliqua. Consectetur adipiscing elit ut aliquam purus sit amet **luctus**.
 
-<img style="float:right; margin: 20px;" src="/image/starterkit.jpg">
+<img style="float:right; margin: 10px;" src="/image/starterkit.jpg">
 
 1. **Consectetur** Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-   * Proin nibh nisl condimentum id venenatis
-   * Libero id faucibus nisl tincidunt eget nullam non.
-     * Lectus vestibulum mattis ullamcorper velit.
-     * Odio aenean sed adipiscing diam donec adipiscing tristique.
-   * Massa tincidunt dui ut ornare lectus sit ame.
+   * Proin nibh nisl condimentum id venenatis. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
+   * Libero id faucibus nisl tincidunt eget nullam non. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+     * Lectus vestibulum mattis ullamcorper velit. Duis autem vel eum iriure dolor
+     * Odio aenean sed adipiscing diam donec adipiscing tristique. zzril delenit augue duis dolore te feugait nulla facilisi. 
+   * Massa tincidunt dui ut ornare lectus sit ame. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.  
    
-2. **Raliquet** Id nibh tortor id  lectus proin nibh nisl condimentum.
-3. **Cursus** Est ante in nibh mauris cursus mattis 99.99% .
+2. **Raliquet** Id nibh tortor id  lectus proin nibh nisl condimentum. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.  
+3. **Cursus** Est ante in nibh mauris cursus mattis 99.99%. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
 
-![Bild](/image/starterkit.jpg)
