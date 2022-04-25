@@ -2,6 +2,18 @@ baseURL: http://example.org/
 languageCode: de-de
 title: Taskit
 theme: Eclectic
+enableEmoji: true
+
+# Enabling inline HTML for Hugo’s Goldmark library
+markup:
+ goldmark:
+ renderer:
+ unsafe: true
+
+#Enabling line number highlighting in Hugo
+markup:
+ highlight:
+ lineNos: true
 
 author:
   facebook: " https://facebook.com/example"
@@ -41,7 +53,11 @@ menu:
     - identifier: blog
       name: Blog
       url: /blog
-      weight: 700          
+      weight: 700 
+    - identifier: test
+      name: Test bed
+      url: /test
+      weight: 800      
 params:
   color: "#ff00ff"
   copyright: "Copyright &copy; 2022 Taskit."
@@ -54,3 +70,4 @@ params:
       recentCount: 7
     - title: Kontakt
       contact: true  
+
