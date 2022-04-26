@@ -2,6 +2,10 @@
 title: "AGB, Liefer- und Zahlungsbedingungen"
 date: 2022-04-21T16:17:06+02:00
 draft: false
+menu: 
+  footer:
+    name: AGB's
+    weight: 200
 ---
 
 

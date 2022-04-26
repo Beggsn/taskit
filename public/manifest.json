@@ -3,7 +3,7 @@
   "short_name": "Taskit",
   "start_url": "/",
   "scope": "/",
-  "theme_color": "#ff00ff",
-  "background_color": "#ff00ff",
+  "theme_color": "#639DAA",
+  "background_color": "#639DAA",
   "display": "standalone"
 }

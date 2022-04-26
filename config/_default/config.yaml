@@ -1,0 +1,11 @@
+# für Konvertierung der Config file in der command line
+# hugo convert toTOML <content file> oder 
+# hugo convert toJSON <content file> oder 
+# hugo convert toYAML <content file>
+
+baseURL: http://example.org/
+languageCode: de-de
+title: Taskit
+theme: Eclectic
+enableEmoji: true
+enableGitInfo: true

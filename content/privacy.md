@@ -2,6 +2,10 @@
 title: "Datenschutz"
 date: 2022-04-21T16:14:25+02:00
 draft: false
+menu:
+  footer:
+    name: Privacy Policy
+    weight: 300
 ---
 
 Datenschutz
