@@ -1,33 +1,34 @@
 main:
-  - identifier: about
-    name: Über uns
-    url: /about  
-    weight: 900
-  - identifier: contact
-    name: Kontakt
-    url: /contact
-    weight: 500
-  - identifier: credits
-    name: Impressum
-    url: /credits
-    weight: 800 
-  - identifier: privacy
-    name: Datenschutz
-    url: /privacy
-    weight: 600
-  - identifier: terms
-    name: AGB's
-    url: /terms
-    weight: 700
   - identifier: rss
     name: RSS
     url: /rss
-    weight: 400  
+    weight: 3
+  - identifier: contact
+    name: Kontakt
+    url: /contact
+    weight: 4
+  - identifier: privacy
+    name: Datenschutz
+    url: /privacy
+    weight: 5
+  - identifier: terms
+    name: AGB's
+    url: /terms
+    weight: 6
+  - identifier: credits
+    name: Impressum
+    url: /credits
+    weight: 7     
+  - identifier: about
+    name: Über uns
+    url: /about  
+    weight: 8
   - identifier: test
-    name: Test Ecke
+    name: Test Ecke(developer)
     url: /test
-    weight: 1100
+    weight: 200
   - identifier: eclectic
     name: Eclectic Theme
     url: /eclectic
-    weight: 1000
+    weight: 100
+    parent: test

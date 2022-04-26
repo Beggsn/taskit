@@ -6,7 +6,7 @@ menu:
   main:
     name: Blog
     identifier: blog
-    weight: 110
+    weight: 2
   footer: 
     name: Blog
     weight: 100  
