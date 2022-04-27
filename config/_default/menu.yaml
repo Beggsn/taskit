@@ -1,4 +1,9 @@
 main:
+  - identifier: produkte
+    name: Produkte
+    url: /produkte
+    weight: 2
+    parent: 
   - identifier: rss
     name: RSS
     url: /rss
@@ -32,3 +37,39 @@ main:
     url: /eclectic
     weight: 100
     parent: test
+  - identifier: ionuts
+    name: IO.Nuts
+    url: /produkte/ionuts
+    weight: 100
+    parent: produkte
+  - identifier: base
+    name: Base
+    url: /produkte/base
+    weight: 200
+    parent: produkte
+  - identifier: flexiot
+    name: Flex IoT
+    url: /produkte/flexiot
+    weight: 300
+    parent: produkte  
+  - identifier: rasppi
+    name: Raspberry Pi
+    url: /produkte/rasppi
+    weight: 400
+    parent: produkte
+  - identifier: bluetooth
+    name: Bluetooth Lösungen
+    url: /produkte/bluetooth
+    weight: 500
+    parent: produkte       
+  - identifier: beacon
+    name: Beacon Netzwerke
+    url: /produkte/beacon
+    weight: 600
+    parent: produkte
+  - identifier: measure2go
+    name: Measure2go
+    url: /produkte/sensornetwork
+    weight: 700
+    parent: produkte 
+               

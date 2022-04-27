@@ -1,6 +1,7 @@
 ---
 title: "Test bed: code and syntax"
 date: 2022-04-22T09:43:20+02:00
+draft: false
 content:
   - type: carousel
     title: Neuheiten im Shop
@@ -15,14 +16,16 @@ content:
         content:  Der BMX160 ist ein sehr kleiner, stromsparender und rauscharmer absoluter Orientierungssensor, der für den Einsatz in tragbaren Geräten entwickelt wurde...
       - title: io-Nuts.OPT3002
         content: Der Licht-zu-Digital-Sensor OPT3002 von Texas Instruments bietet die Funktion eines optischen Lichtleistungsmessers in nur einer Komponente...
-draft: false
 ---
+
+
+
 
 Copyright&copy;
 
 Trademark&trade;
 
-Ein Link zu [Emojis](https://unicode.org/emoji/charts/full-emoji-list.html/) :smile: 
+Ein Link zu allen [Emojis](https://unicode.org/emoji/charts/full-emoji-list.html/) :smile: 
 
 ## Das ist hervorgehobener Text in gelb{style= "background: yellow"}
 
