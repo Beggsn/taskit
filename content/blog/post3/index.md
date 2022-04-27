@@ -2,6 +2,8 @@
 title: "Post 3"
 date: 2022-04-26T11:55:28+02:00
 draft: false
+tags: [tag2, tag3]
+categories: [Stamp]
 ---
 
 Diam neque felis bibendum nibh platea urna rutrum vel nullam. Taciti velit pretium semper sed vulputate scelerisque tristique ante a. 

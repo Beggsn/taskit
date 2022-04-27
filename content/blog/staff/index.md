@@ -1,7 +1,9 @@
 ---
-title: "Staff 1"
+title: "Mitarbeiter Kommentar"
 date: 2022-04-26T15:46:59+02:00
 draft: false
+tags: [tag1, tag2, tag3]
+categories: [Base, Design]
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet volutpat consequat mauris nunc congue nisi vitae suscipit. Elit sed vulputate mi sit amet mauris. <!--more-->

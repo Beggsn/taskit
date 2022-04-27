@@ -2,6 +2,8 @@
 title: "Martin_F"
 date: 2022-04-26T11:53:25+02:00
 draft: false
+categories: [Design, Public, Comment]
+
 ---
 
 Sollicitudin habitant sem pretium odio blandit dictumst nec natoque fringilla iaculis. Dui non at parturient aliquam quis magna. 

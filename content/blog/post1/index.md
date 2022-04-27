@@ -2,6 +2,8 @@
 title: "Post 1"
 date: 2022-04-26T11:55:12+02:00
 draft: false
+tags: [tag1, tag2]
+categories: [Test Kategorie]
 ---
 
 Rhoncus scelerisque euismod diam adipiscing nam primis dignissim velit tincidunt congue convallis. 

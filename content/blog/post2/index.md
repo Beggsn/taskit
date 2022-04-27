@@ -2,6 +2,8 @@
 title: "Post 2"
 date: 2022-04-26T11:55:24+02:00
 draft: false
+tags: [tag1, tag2]
+categories: [GPIO]
 ---
 
 A letius neque turpis et dis auctor. Phasellus est aenean hac eu vel tempus. Pellentesque ultricies nisl tempus natoque accumsan aliquam si potenti felis. 
