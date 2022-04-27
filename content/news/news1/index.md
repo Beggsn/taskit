@@ -8,4 +8,6 @@ Posuere lobortis nisi accumsan hac mi malesuada mollis cras ullamcorper. Amet eg
 
 Purus nisi pellentesque dictum lobortis laoreet dictumst porttitor natoque euismod vulputate dui. Tempor mattis montes hendrerit quis ex arcu tempus conubia aenean ligula. Parturient habitasse pharetra venenatis ex eu senectus commodo. Facilisis semper eleifend per libero senectus commodo nam platea. Est curabitur lacinia hac faucibus mattis elit. Cubilia ut laoreet euismod magnis nullam blandit ipsum ridiculus nostra himenaeos imperdiet.
 
-Mehr Info zur Hugo Software [hier](https://de.wikipedia.org/wiki/Hugo_(Software)) entlang.
+Mehr Info zu taskit [hier](https://taskit.de/) entlang.
+
+Folge uns auf unserem [YouTube](https://www.youtube.com/channel/UCv1jIDpGDWBCqJjuJv3P4uQ/) Kanal.
