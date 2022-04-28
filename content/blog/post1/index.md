@@ -8,6 +8,8 @@ categories: [Test Kategorie]
 
 Rhoncus scelerisque euismod diam adipiscing nam primis dignissim velit tincidunt congue convallis. 
 
+{{% productInfo %}}
+
 * Maximus dui curabitur non mi tellus netus leo tristique purus tempus semper. 
 * Tempus consectetur ultricies parturient quis vel commodo facilisi phasellus fames. 
     * Efficitur aliquet accumsan ullamcorper integer sodales dui finibus torquent. 
