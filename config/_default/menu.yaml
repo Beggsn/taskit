@@ -29,14 +29,14 @@ main:
     url: /about  
     weight: 8
   - identifier: test
-    name: Test Ecke(developer)
+    name: Developer Ecke
     url: /test
     weight: 200
-  - identifier: eclectic
-    name: Eclectic Theme
-    url: /eclectic
-    weight: 100
-    parent: test
+  # - identifier: eclectic
+  #   name: Eclectic Theme
+  #   url: /eclectic
+  #   weight: 100
+  #   parent: test
   - identifier: ionuts
     name: IO.Nuts
     url: /produkte/ionuts

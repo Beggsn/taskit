@@ -2,20 +2,7 @@
 title: "Test bed: code and syntax"
 date: 2022-04-22T09:43:20+02:00
 draft: false
-content:
-  - type: carousel
-    title: Neuheiten im Shop
-    items: 
-      - title: io-Nuts.BME280
-        content: Der BME280 ist ein Feuchtigkeitssensor, der speziell für mobile Anwendungen und Wearables entwickelt wurde, bei denen Größe und geringer Stromverbrauch wichtige Designparameter sind...
-      - title: io-Nuts.MMC5603
-        content: Halleffekt-/Magnetsensoren für Plattenmontage 30 G, Monolithic, High Performance, Low Cost 3-axis Magnetic Sensor...
-      - title: io-Nuts.DPS368
-        content: DPS368 ist ein miniaturisierter digitaler barometrischer Luftdrucksensor mit ultrahoher Präzision (±2 cm) und niedrigem Stromverbrauch, der sowohl Druck als auch Temperatur messen kann...
-      - title: io-Nuts.BMX160
-        content:  Der BMX160 ist ein sehr kleiner, stromsparender und rauscharmer absoluter Orientierungssensor, der für den Einsatz in tragbaren Geräten entwickelt wurde...
-      - title: io-Nuts.OPT3002
-        content: Der Licht-zu-Digital-Sensor OPT3002 von Texas Instruments bietet die Funktion eines optischen Lichtleistungsmessers in nur einer Komponente...
+
 ---
 
 

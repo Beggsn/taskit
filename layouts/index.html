@@ -2,16 +2,31 @@
 <html lang="de">
   <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Taskit">
+    {{/* Existence checks */}}
+    {{ if $.Description }}<meta name="description" content="{{$.Description}} ">{{ end }}
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./index.css">
-    <title>Taskit GmbH</title>
+
+    {{/* Existence checks, falling back to the website’s title */}}
+    {{ $title := $.Title }}
+    {{ if not $title }}
+      {{ $title = site.Title }}
+    {{ end }}
+    {{/* Providing the web page title */}}
+    {{ if $title }}<title>{{ $title }}</title>{{ end }}
+
   </head>
   <body class="home">
     <section>
       <img src="./image/logo_taskit.svg" alt="Taskit logo" width="64">
       
+      {{/*  definiert in /content/_index.md  */}} 
+      <h2>{{ $.Params.Subtitle }}</h2>
       
+      {{/* Existence checks */}}
+      {{if $.Title }}<h1>{{ $.Title }}</h1>{{ end }}
+      {{if $.Params.Subtitle }}<h2>{{ $.Params.Subtitle }}</h2>{{ end }}
+
       <a href="./produkte">Jetzt erkunden</a>
     </section>
     <footer>
