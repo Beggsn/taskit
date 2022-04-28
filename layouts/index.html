@@ -6,28 +6,28 @@
     {{ if $.Description }}<meta name="description" content="{{$.Description}} ">{{ end }}
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./index.css">
-
-    {{/* Existence checks, falling back to the website’s title */}}
-    {{ $title := $.Title }}
-    {{ if not $title }}
-      {{ $title = site.Title }}
-    {{ end }}
-    {{/* Providing the web page title */}}
-    {{ if $title }}<title>{{ $title }}</title>{{ end }}
-
+    {{/*  Declaring a default title  */}}
+    {{$title := default site.Title .Title}}
+    {{/*  Overriding the context variable. 
+    The . represents the value of the variable passed to with */}}
+    {{ with $title }}<title>{{.}}</title>{{end}}
   </head>
-  <body class="home">
-    <section>
-      <img src="./image/logo_taskit.svg" alt="Taskit logo" width="64">
-      
-      {{/*  definiert in /content/_index.md  */}} 
-      <h2>{{ $.Params.Subtitle }}</h2>
-      
+  <body class="home">  
+    <section id="intro">{{/* icon kreis pfeil runter*/}} 
+      <img src="./image/logo_taskit.svg" alt="Taskit logo" width="64">      
       {{/* Existence checks */}}
-      {{if $.Title }}<h1>{{ $.Title }}</h1>{{ end }}
-      {{if $.Params.Subtitle }}<h2>{{ $.Params.Subtitle }}</h2>{{ end }}
-
-      <a href="./produkte">Jetzt erkunden</a>
+      {{if $.Title }}<h1>{{ $.Title }}</h1>{{end}}
+      {{/*  definiert in /content/_index.md  
+            adding the humanize function "humanize" and 
+            adding the markdownify function ( parse Markdown from front matter data)
+            using the pipe operator*/}} 
+      {{with .Param "subtitle"}}<h2>{{. | humanize | markdownify}}</h2>{{end}}
+      
+      <a href="{{ ref . (.Param "explore") }}">Jetzt erkunden</a>
+      {{/* "alter link" <a href="./produkte">Jetzt erkunden</a>  */}}
+    </section>
+    <section id="description">
+      {{.Content}}
     </section>
     <footer>
         <a href="./news">News</a>
