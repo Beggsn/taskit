@@ -2,6 +2,11 @@
 title: "Impressum"
 date: 2022-04-21T16:16:30+02:00
 draft: false
+menu:
+  footer:
+    name: Impressum
+    identifier: credits
+    weight: 400
 ---
 
 ### This website uses resources from a variety of places. Here is to all of them:

@@ -7,8 +7,13 @@ menu:
     name: Blog
     identifier: blog
     weight: 1
+    post: From our editors
   footer: 
     name: Blog
     weight: 100  
 ---
 
+The taskit Blog
+===============
+
+Curated content about our customers, teams and products.

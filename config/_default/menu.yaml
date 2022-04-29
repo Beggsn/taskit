@@ -3,15 +3,18 @@ main:
     name: Produkte
     url: /produkte
     weight: 2
-    parent: 
+    parent:
+    post: zur Paywall 
   - identifier: rss
     name: RSS
     url: /rss
     weight: 3
+    post: zur Info-Krake
   - identifier: contact
     name: Kontakt
     url: /contact
     weight: 4
+    post: At your service
   - identifier: privacy
     name: Datenschutz
     url: /privacy
@@ -20,14 +23,17 @@ main:
     name: AGB's
     url: /terms
     weight: 6
+    post: Regeln, regeln
   - identifier: credits
     name: Impressum
     url: /credits
-    weight: 7     
+    weight: 7 
+    post: Wer ist Schuld?    
   - identifier: about
     name: Über uns
     url: /about  
     weight: 8
+    post: Our facination origins
   - identifier: test
     name: Developer Ecke
     url: /test

@@ -3,6 +3,11 @@ title: "Über uns"
 date: 2022-04-21T16:16:16+02:00
 description: "lorem ipsum."
 draft: false
+menu:
+  home:
+    name: about
+    identifier: about
+    weight: -500
 ---
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
