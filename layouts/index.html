@@ -26,7 +26,7 @@
           <ul>
             {{range . }}
               <li>
-                <a href="{{.URL }}">{{.Name | humanize }}</a>
+                <a href="{{.URL }}">{{.Name }}</a> {{/*  | humanize */}}
               </li>
             {{ end }}
           </ul>
@@ -41,7 +41,7 @@
                           adding the humanize function "humanize" and 
                           adding the markdownify function ( parse Markdown from front matter data)
                           using the pipe operator*/}} 
-      {{with .Param "subtitle"}}<h2>{{. | humanize | markdownify}}</h2>{{end}}   
+      {{with .Param "subtitle"}}<h2>{{. | markdownify}}</h2>{{end}}  {{/*  | humanize */}} 
       <a href="{{ref . (.Param "explore")}}">Jetzt erkunden</a>
       {{/* "alter link" <a href="./produkte">Jetzt erkunden</a>  */}}
     </section>
@@ -76,6 +76,31 @@
         </ul>
       </section>
     {{ end }}
+
+    {{with 
+      (where site.RegularPages 
+      ".Section" "in" site.Params.mainSections)
+    }}
+    <section id="blog">
+      <h1>Aus unserem Blog</h1>
+      <ul class="posts">
+        {{range first 1 .}}
+        <li class="post">
+          <a href="{{.Permalink}}">
+            <h2>
+              {{.Title}}
+            </h2>
+            <article>
+              {{.Summary}}
+            </article>
+            <div>Weiter lesen</div>
+          </a>
+        </li>
+        {{end}}  
+      </ul>
+    </section>
+    {{end}} 
+
     <footer class="dark">
       {{with site.Menus.footer }}
       <nav>
@@ -113,16 +138,6 @@
       </ul>
       <div>{{.Param "copyright" | markdownify}}</div>
   </footer>  
-    {{/*  Hard coded early version  
-    <footer class="dark">
-        <a href="./news">News</a>
-        <a href="./blog">Blog</a>
-        <a href="./rss">RSS</a>
-        <a href="./contact">Kontakt</a>
-        <a href="./privacy">Datenschutz</a>
-        <a href="./terms">AGB's</a>     
-        <a href="./credits">Impressum</a>
-        <a href="./about">Über uns</a>       
-    </footer>  */}}
+
   </body>
-</html>
+</html> 

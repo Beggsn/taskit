@@ -13,7 +13,3 @@ menu:
     weight: 100  
 ---
 
-The taskit Blog
-===============
-
-Curated content about our customers, teams and products.
