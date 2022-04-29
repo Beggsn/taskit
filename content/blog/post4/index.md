@@ -3,7 +3,7 @@ title: "Post 4"
 date: 2022-04-26T11:55:32+02:00
 draft: false
 tags: [tag2, tag3]
-categories: [testcategorie]
+categories: [testcategorie, Development]
 series: [Testserie]
 ---
 

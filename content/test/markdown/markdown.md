@@ -3,6 +3,7 @@ title: "Markdown"
 date: 2022-04-28T12:01:47+02:00
 draft: false
 parent: test
+categories: [Development]
 content:
   - type: carousel
     title: Neuheiten im Shop

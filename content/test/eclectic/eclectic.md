@@ -2,6 +2,7 @@
 title: "Eclectic Theme"
 date: 2022-04-25T17:02:16+02:00
 draft: false
+categories: [Development]
 ---
 
 Key Features Eclectic Theme

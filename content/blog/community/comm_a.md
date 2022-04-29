@@ -2,7 +2,7 @@
 title: "Christian_O"
 date: 2022-04-26T11:53:03+02:00
 draft: false
-categories: [GPIO, Public, Comment]
+categories: [GPIO, Public, Comment, Development]
 ---
 
 Senectus augue quis suspendisse cursus commodo maecenas hendrerit. Laoreet aliquam consectetuer pharetra arcu ex massa nulla. Nascetur aliquam curae integer nibh congue lectus. 
