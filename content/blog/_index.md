@@ -12,4 +12,7 @@ menu:
     name: Blog
     weight: 100  
 ---
+The Acme Blog
+============
 
+Curated content about our teams and products.
