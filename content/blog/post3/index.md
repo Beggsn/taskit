@@ -6,6 +6,10 @@ tags: [tag2, tag3]
 categories: [Stamp, Development]
 ---
 
+## Preis
+
+Der Test-Betrag beträgt `{{< price product="Linie" >}}`.
+
 Diam neque felis bibendum nibh platea urna rutrum vel nullam. Taciti velit pretium semper sed vulputate scelerisque tristique ante a. 
 
 Quisque feugiat tempus vestibulum porta condimentum nisl porttitor pharetra ac. Magna penatibus consequat etiam ad amet curae. Sodales laoreet neque nec molestie accumsan. 

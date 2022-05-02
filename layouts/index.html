@@ -46,6 +46,27 @@
       {{/* "alter link" <a href="./produkte">Jetzt erkunden</a>  */}}
     </section>
 
+    {{/* Looping durch products.csv*/}}
+    {{with resources.GetMatch "products.csv"}}
+    <section id="products">
+      <h1>Unsere Produkte</h1>
+      {{with . | transform.Unmarshal (dict "delimiter" ",")}}
+        <table>
+          {{range $i, $value := . }}
+            {{if eq $i 0}}<thead>{{end}}
+              <tr>
+                {{range $value}}
+                  <td>{{.}}</td>
+                {{end}}
+              </tr>
+              {{if eq $i 0}}</thead>{{end}}
+            {{end}}
+        </table>
+      {{end}}
+        <a href="{{.Permalink}}" download>Download Liste</a>
+    </section>
+    {{end}}
+
     <section id="description">
       {{.Content}}
     </section>
@@ -77,6 +98,7 @@
       </section>
     {{ end }}
 
+    {{/* main section "Aus unserem Blog"*/}}
     {{with 
       (where site.RegularPages 
       ".Section" "in" site.Params.mainSections)
@@ -84,7 +106,7 @@
     <section id="blog">
       <h1>Aus unserem Blog</h1>
       <ul class="posts">
-        {{range first 1 .}}
+        {{range first 3 .}}
         <li class="post">
           <a href="{{.Permalink}}">
             <h2>
@@ -100,6 +122,26 @@
       </ul>
     </section>
     {{end}} 
+
+    {{/* main section "Erfahrungsberichte"*/}}
+    {{ with .Param "testimonials" }}
+      <section id="testimonials">
+      <h1>Kunden Erfahrungsberichte</h1>
+      <div>
+        <ol>
+          {{ range .}}
+            <li>
+              <p>{{.content}}</p>
+              <div>
+                <h2>{{.author}}</h2>
+                <h3>{{.from}}</h3>
+              </div>
+            </li>
+          {{ end }}
+        </ol>
+      </div>
+    </section>
+    {{ end }}
 
     <footer class="dark">
       {{with site.Menus.footer }}

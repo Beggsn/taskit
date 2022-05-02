@@ -7,6 +7,10 @@ categories: [testcategorie, Development]
 series: [Testserie]
 ---
 
+## Preis
+
+Der Test-Betrag beträgt `{{< price product="Rhombus">}}`
+
 Pulvinar curabitur hendrerit finibus erat sit odio augue sollicitudin. Nunc ex ac dapibus pede ridiculus mus. 
 
     * Interdum bibendum pellentesque consequat himenaeos consectetur dapibus dictum euismod si ante. 

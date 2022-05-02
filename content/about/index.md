@@ -35,3 +35,11 @@ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie co
 
 {{% productInfo %}}
 
+-------------------
+
+## Unsere Werte ("repeat" shortcode)
+{{< repeat 3>}}
+Der Kunde *ist* König.
+{{< / repeat>}}
+Nothing else.
+

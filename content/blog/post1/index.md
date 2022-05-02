@@ -8,6 +8,10 @@ categories: [Test Kategorie, Development]
 
 Rhoncus scelerisque euismod diam adipiscing nam primis dignissim velit tincidunt congue convallis. 
 
+## Preis
+
+Der Test-Betrag beträgt `{{< price "Kreis" >}}`.
+
 {{% productInfo %}}
 
 * Maximus dui curabitur non mi tellus netus leo tristique purus tempus semper. 

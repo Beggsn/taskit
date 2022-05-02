@@ -1,0 +1,14 @@
+{{$count := default 5 (default (.Get 0) (.Get "count"))}}
+
+{{/* Preprocess to speed up preprocessing for better performance.
+     Uses markdownify to convert the supplied inner data from Markdown to HTML.*/}}
+{{$inner := .Inner | markdownify}}
+{{if gt $count 0}}
+<ul>
+    {{/* seq takes a number and generates a slice from 0 to that number. 
+         To loop $count times to print $inner in an HTML unordered list.*/}}
+  {{ range seq $count}}
+  <li>{{$inner}}</li>
+  {{end}}
+</ul>
+{{end}}

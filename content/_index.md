@@ -5,7 +5,21 @@ description: Willkommen auf der taskit Webseite.
 # Highlighting parts of the subtitle
 subtitle: Willkommen auf der **taskit** Webseite.(subtitle)
 explore: produkte
+testimonials:
+  - author: Müller 
+    from: Fictional Gmbh
+    content: >
+              Aliquam sem et tortor consequat id porta.
 
+  - author: Schmitt 
+    from: 0815 GmbH
+    content: >
+              Tempor commodo ullamcorper a lacus vestibulum.
+
+  - author: Lorem 
+    from: Ipsum GmbH
+    content: >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  
 ---
 
 taskit **lorem** ipsom dolor
