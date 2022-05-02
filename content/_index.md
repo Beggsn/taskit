@@ -20,6 +20,7 @@ testimonials:
     from: Ipsum GmbH
     content: >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  
+type: modern # ohne type: xxx wird der der standard theme genutzt
 ---
 
 taskit **lorem** ipsom dolor
