@@ -6,11 +6,13 @@ menu:
   footer:
     name: Datenschutz
     weight: 300
+type: modern    
 ---
 
 
 Datenschutzerklärung
---------------------
+====================
+
 
 __Wir freuen uns sehr über Ihr Interesse an unserem Unternehmen__. Datenschutz hat einen besonders hohen Stellenwert für die Geschäftsleitung der **taskit** GmbH. Eine Nutzung der Internetseiten der **taskit** GmbH ist grundsätzlich ohne jede Angabe personenbezogener Daten möglich. Sofern eine betroffene Person besondere Services unseres Unternehmens über unsere Internetseite in Anspruch nehmen möchte, könnte jedoch eine Verarbeitung personenbezogener Daten erforderlich werden. Ist die Verarbeitung personenbezogener Daten erforderlich und besteht für eine solche Verarbeitung keine gesetzliche Grundlage, holen wir generell eine Einwilligung der betroffenen Person ein.
 

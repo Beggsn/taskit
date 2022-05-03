@@ -1,21 +1,21 @@
+{{/*If the shortcode in the context variable is passed, named arguments get the product argument, falling back to the first argument given.*/}}
 {{- $product := default (.Get 0) (.Get "product") -}}
-    {{/*If the shortcode in the context variable is passed, 
-    named arguments get the product argument, 
-    falling back to the first argument given.*/}}
 {{- if $product -}}
   {{- $products := resources.GetMatch "products.csv" -}}
-        {{/*Reads the file products.csv from the global assets; 
-        resources (a lowercase “r”) refers to global assets.*/}}  
+  {{/*Reads the file products.csv from the global assets; 
+      resources (a lowercase “r”) refers to global assets.*/}}  
   {{- $parsedProducts := $products | transform.Unmarshal (dict "delimiter" ",") -}}
-            {{/* Loops through the rows of the CSV*/}}
+            
   {{- range $r := $parsedProducts -}}
-            {{/* If the first column (index 0) for any row is 
-            the exact text as the passed product, prints 
-            the third column (index 2) of that row*/}}
+  {{/* Loops through the rows of the CSV*/}}
     {{- if eq (index $r 0) $product -}}
-            {{/* The trim function removes any spaces from the CSV.*/}}            
+    {{/* If the first column (index 0) for any row is the exact text as the passed product, 
+         prints the third column (index 2) of that row*/}}                       
      $ {{- trim (index $r 2) " " -}}
+       {{/* The trim function removes any spaces from the CSV.*/}} 
     {{- end -}}
   {{- end -}}
 {{- end -}}
 
+{{/* Checkpoint to-do
+  Listing 6.23 Using a products partial (layouts/shortcodes/price.html)*/}}

@@ -16,24 +16,13 @@
     <body class="{{ block "bodyClass" .}}{{end}}">
       {{block "header" .}}
         <header>
-        <a href="{{ site.BaseURL | relLangURL }}">
-        <img src="{{ site.BaseURL }}/image/logo.png" alt="Taskit Logo" 
-                    width="48" />
-              GmbH
-        </a>
-        {{with site.Menus.main }}
-          <nav>
-            <button class="hamburger">&#9776;</button>
-            <ul>
-              {{range .}}
-                <li>
-                  <a href="{{.URL}}">{{.Name }}</a> {{/* | humanize */}}
-                </li>
-              {{end}}
-            </ul>
-          </nav>
-        {{end}}
-      </header>
+          <a href="{{ site.BaseURL | relLangURL }}">
+          <img src="{{ site.BaseURL }}/image/logo.png" alt="Taskit Logo" 
+                      width="48" />
+                GmbH
+          </a>
+          {{ partialCached "menu.html" (dict "Menu" site.Menus.main "Button" true) "main"}}
+        </header>
     {{ end }}
     
     {{block "body" .}}
@@ -52,7 +41,7 @@
     {{block "footer" .}}
       <footer class="dark">
         {{/*  partial to render the footer */}}
-        {{ partial "menu.html" (dict "Menu" site.Menus.footer) }}
+        {{ partialCached "menu.html" (dict "Menu" site.Menus.footer) "footer" }}
         <ul>
           {{with site.Author.facebook}}
             <li>

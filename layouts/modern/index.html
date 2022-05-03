@@ -20,7 +20,7 @@
 
     {{/*  partial to render the main menu */}}
     {{/* Menüleiste nach erster "Seite/Section, oberhalb DummyProdukte"*/}}                      
-    {{ partial "menu.html" (dict "Menu" site.Menus.footer) }}  
+    {{ partialCached "menu.html" (dict "Menu" site.Menus.footer) "footer" }}  
 
   </section>
   {{/* Looping durch products.csv*/}}
