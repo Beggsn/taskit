@@ -1,11 +1,11 @@
 {{define "bodyClass"}} home {{end}}
 
-{{define "body"}} {{/*  filling the block values: 
-                  {{define "body"}} 
-                  {{$title := ...}} redefines $title
-                  {{end}} */}}
-{{$title := default site.Title .Title}}
-  
+{{define "body"}} 
+{{/*  filling the block values: 
+                              {{define "body"}} 
+                              {{$title := ...}} redefines $title
+                              {{end}} */}}
+{{$title := default site.Title .Title}} 
             {{/* icon kreis pfeil runter*/}} 
   <section id="intro">  
                         {{/* Existence checks */}}
@@ -17,10 +17,15 @@
     {{with .Param "subtitle"}}<h2>{{. | markdownify}}</h2>{{end}}  {{/*  | humanize */}} 
     <a href="{{ref . (.Param "explore")}}">Jetzt erkunden</a>
     {{/* "alter link" <a href="./produkte">Jetzt erkunden</a>  */}}
-  </section>
 
+    {{/*  partial to render the main menu */}}
+    {{/* Menüleiste nach erster "Seite/Section, oberhalb DummyProdukte"*/}}                      
+    {{ partial "menu.html" (dict "Menu" site.Menus.footer) }}  
+
+  </section>
   {{/* Looping durch products.csv*/}}
   {{with resources.GetMatch "products.csv"}}
+
   <section id="products">
     <h1>TestDummy Produkte</h1>
     {{with . | transform.Unmarshal (dict "delimiter" ",")}}
@@ -104,13 +109,13 @@
     <div>
       <ol>
         {{ range .}}
-          <li>
-            <p>{{.content}}</p>
-            <div>
-              <h2>{{.author}}</h2>
-              <h3>{{.from}}</h3>
-            </div>
-          </li>
+        <li>
+          <p>{{.content}}</p>
+          <div>
+            <h2>{{.author}}</h2>
+            <h3>{{.from}}</h3>
+          </div>
+        </li>
         {{ end }}
       </ol>
     </div>
