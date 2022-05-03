@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
     <head>
         <meta charset="UTF-8">
         {{with default .Summary .Description}}
@@ -12,18 +13,83 @@
         {{$title := default site.Title .Title}}
         {{with $title}}<title>{{.}}</title>{{end}}  
     </head>
-    <body class="home">
-        {{block "body" .}}
-            <main>
-              {{with .Title}}
-                <h1>
-                  {{.}}
-                </h1>
+
+    <body class="{{block "bodyClass" .}}{{end}}">
+      {{block "header" .}}
+        <header>
+        <a href="{{ site.BaseURL | relLangURL }}">
+        <img src="{{ site.BaseURL }}/image/logo.png" alt="Acme Logo" 
+                    width="48" />
+              GmbH
+        </a>
+        {{with site.Menus.main }}
+          <nav>
+            <button class="hamburger">&#9776;</button>
+            <ul>
+              {{range .}}
+                <li>
+                  <a href="{{.URL}}">{{.Name }}</a> {{/* | humanize */}}
+                </li>
               {{end}}
-              <div class="content">
-                  {{.Content}}
-              </div>    
-            </main>
+            </ul>
+          </nav>
         {{end}}
-    </body>
+      </header>
+    {{ end }}
+    
+    {{block "body" .}}
+      <main>
+        {{with .Title}}
+          <h1>
+            {{.}}
+          </h1>
+        {{end}}
+        <div class="content">
+          {{.Content}}
+        </div>
+      </main>
+    {{end}}
+
+    {{block "footer" .}}
+      <footer class="dark">
+        {{with site.Menus.footer }}
+        <nav>
+          <ul>
+          {{range .}}
+          <li>
+            <a href="{{.URL}}">{{.Name }}</a>
+          </li>
+          {{end}}
+          </ul>
+        </nav>
+        {{end}}
+        <ul>
+          {{with site.Author.facebook}}
+            <li>
+              <a href="{{.}}" aria-label="Facebook">
+                <i class="  icon-facebook"></i>
+              </a>
+            </li>
+          {{end}}
+
+          {{with site.Author.twitter}}
+            <li>
+              <a href="{{.}}" aria-label="Twitter">
+                <i class="icon-twitter"></i>
+              </a>
+            </li>
+          {{end}}
+
+          {{with site.Author.email}}
+            <li>
+              <a href="mailto:{{.}}" aria-label="email">
+                <i class="icon-email"></i>
+              </a>
+            </li>
+          {{end}}
+        </ul>
+        <div>{{.Param "copyright" | markdownify}}</div>
+    </footer>
+  {{end}}
+  </body>
 </html>

@@ -6,6 +6,7 @@ menu:
   footer:
     name: AGB's
     weight: 200
+type: modern    
 ---
 
 
