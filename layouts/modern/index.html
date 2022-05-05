@@ -13,44 +13,75 @@
     <div class="intro">  
                           {{/* Existence checks */}}
       {{with $title }}<h1>{{ . }}</h1>{{end}}
-        {{/*  definiert in /content/_index.md || 
-        adding the humanize function "humanize" and "markdownify" function 
-        ( parse Markdown from front matter data) using the pipe operator*/}} 
+        {{/*  definiert in /content/_index.md | parse Markdown from front matter data using the pipe operator*/}} 
       {{with .Param "subtitle"}}<h2>{{. | markdownify}}</h2>{{end}}  {{/*  | humanize */}} 
       <a href="{{ref . (.Param "explore")}}">Jetzt erkunden</a>
-      {{/* "alter link" <a href="./produkte">Jetzt erkunden</a>  */}}
-
       {{/*  partial to render the main menu */}}
       {{/* Menüleiste nach erster "Sectionseite, oberhalb DummyProdukte"*/}}                      
       {{ partialCached "menu.html" (dict "Menu" site.Menus.footer) "footer" }}  
     </div>
   </section>
 
-  {{/* Looping durch products.csv*/}}
-  {{with resources.GetMatch "products.csv"}}
 
-  <section id="products">
+  {{with (partialCached "products.html" "cache")}}
+  <section id="store">
     <h1>TestDummy Produkte</h1>
-    {{with . | transform.Unmarshal (dict "delimiter" ",")}}
-      <table>
-        {{range $i, $value := . }}
-          {{if eq $i 0}}<thead>{{end}}
-            <tr>
-              {{range $value}}
-                <td>{{.}}</td>
-              {{end}}
-            </tr>
-            {{if eq $i 0}}</thead>{{end}}
-          {{end}}
-      </table>
-    {{end}}
-      <a href="{{.Permalink}}" download>Download Liste</a>
+
   </section>
   {{end}}
+
+  {{/*  {{with (partialCached "products.html" "cache")}}
+  <section id="store">
+    <h1>TestDummy Produkte</h1>
+    <ul>
+      {{range $name, $data := .}}
+      <li>
+        <a href="#">
+          {{$img := resources.GetMatch (print "image/products/" $name ".*") | images.Filter (images.Overlay (resources.GetMatch "image/watermark.*") 0 0)}}
+          {{$img := $img.Resize "1000x"}}
+          <img src="{{$img.Permalink}}" alt="{{$name}}">
+          <h2>{{$name}}</h2>
+          <div class="price">$ {{$data.Price}}</div>
+          <div class="rating">
+            {{range (seq $data.Rating)}}&starf;{{end}}
+            {{- range seq (sub 5 ($data.Rating | int))}}&star;{{end}}
+          </div>  
+        </a>
+      </li>
+      {{end}}
+    </ul>
+  </section>
+  {{end}}  */}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   <section id="description">
     {{.Content}}
   </section>
+
+
 
   {{/* Rendering the menu on the home page.*/}}
   {{ with site.Menus.main }}  {{/* The outer with statement ensures 
@@ -79,11 +110,16 @@
     </section>
   {{ end }}
 
-  {{/* main section "Aus unserem Blog"*/}}
+
+
+  
   {{with 
     (where site.RegularPages 
     ".Section" "in" site.Params.mainSections)
   }}
+
+
+  {{/* main section "Aus unserem Blog"*/}}
   <section id="blog">
     <h1>Aus unserem Blog</h1>
     <ul class="posts">
@@ -110,6 +146,7 @@
   </section>
   {{end}} 
 
+  
   {{/* main section "Erfahrungsberichte"*/}}
   {{ with .Param "testimonials" }}
     <section id="testimonials">
