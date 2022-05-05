@@ -5,24 +5,27 @@
                               {{define "body"}} 
                               {{$title := ...}} redefines $title
                               {{end}} */}}
-{{$title := default site.Title .Title}} 
-            {{/* icon kreis pfeil runter*/}} 
-  <section id="intro">  
-                        {{/* Existence checks */}}
-    {{with $title }}<h1>{{ . }}</h1>{{end}}
-                        {{/*  definiert in /content/_index.md  
-                        adding the humanize function "humanize" and 
-                        adding the markdownify function ( parse Markdown from front matter data)
-                        using the pipe operator*/}} 
-    {{with .Param "subtitle"}}<h2>{{. | markdownify}}</h2>{{end}}  {{/*  | humanize */}} 
-    <a href="{{ref . (.Param "explore")}}">Jetzt erkunden</a>
-    {{/* "alter link" <a href="./produkte">Jetzt erkunden</a>  */}}
+{{$title := default site.Title .Title}}
 
-    {{/*  partial to render the main menu */}}
-    {{/* Menüleiste nach erster "Sectionseite, oberhalb DummyProdukte"*/}}                      
-    {{ partialCached "menu.html" (dict "Menu" site.Menus.footer) "footer" }}  
+  <section id="hero">
+    <img class="hero" src="{{partialCached "hero.svg" $ "nothing"}}" alt="taskit GmbH" width="24rem" />
+    {{/* icon kreis pfeil runter*/}} 
+    <div class="intro">  
+                          {{/* Existence checks */}}
+      {{with $title }}<h1>{{ . }}</h1>{{end}}
+        {{/*  definiert in /content/_index.md || 
+        adding the humanize function "humanize" and "markdownify" function 
+        ( parse Markdown from front matter data) using the pipe operator*/}} 
+      {{with .Param "subtitle"}}<h2>{{. | markdownify}}</h2>{{end}}  {{/*  | humanize */}} 
+      <a href="{{ref . (.Param "explore")}}">Jetzt erkunden</a>
+      {{/* "alter link" <a href="./produkte">Jetzt erkunden</a>  */}}
 
+      {{/*  partial to render the main menu */}}
+      {{/* Menüleiste nach erster "Sectionseite, oberhalb DummyProdukte"*/}}                      
+      {{ partialCached "menu.html" (dict "Menu" site.Menus.footer) "footer" }}  
+    </div>
   </section>
+
   {{/* Looping durch products.csv*/}}
   {{with resources.GetMatch "products.csv"}}
 
@@ -85,9 +88,14 @@
     <h1>Aus unserem Blog</h1>
     <ul class="posts">
       {{/*Anzahl der Post die über dem footer (Aus unserem Blog Bereich)gerendert werden*/}}
-      {{range first 4 .}}
+      {{range first 3 .}}
       <li class="post">
         <a href="{{.Permalink}}">
+        {{/*  Hinzufügen eines Titelbildes für Blogbeiträge */}}  
+        {{$title := .Title}}
+        {{with (.Resources.GetMatch "cover.*")}}
+          <img alt="{{$title}}" loading="lazy" src="{{(.Resize "1000x webp").Permalink}}" />
+        {{end}}  
           <h2>
             {{.Title}}
           </h2>

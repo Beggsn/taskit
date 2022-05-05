@@ -3,7 +3,7 @@
   "short_name": "Taskit GmbH",
   "start_url": "/",
   "scope": "/",
-  "theme_color": "#DC2626",
-  "background_color": "#DC2626",
+  "theme_color": "#E20074",
+  "background_color": "#E20074",
   "display": "standalone"
 }
