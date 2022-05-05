@@ -1,0 +1,2 @@
+{{/*  Using color from the parameters.  */}}
+{{ return (resources.GetMatch "image/logo.svg.tpl" | resources.ExecuteAsTemplate "logo.svg" "nothing").Permalink }}

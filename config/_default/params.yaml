@@ -1,4 +1,6 @@
-color: "#639DAA"
+
+color: "#DC2626" #Farbschema
+
 copyright: "Copyright &copy; 2022 Taskit."
 footer:
   - title: Über uns

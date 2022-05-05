@@ -8,20 +8,17 @@
         <meta name="viewport" 
             content="width=device-width, initial-scale=1.0" />
             {{/* Compiling SCSS into CSS */}}
-            {{ $css := resources.GetMatch "index.scss"| resources.ToCSS}}
-            <link rel="stylesheet" type="text/css" href="{{$css.Permalink}}">
+            {{ $css := partialCached "index.css.html" $ "nothing"}}
+            <link rel="stylesheet" type="text/css" href="{{$css}}">
         {{$title := default site.Title .Title}}
         {{with $title}}<title>{{.}}</title>{{end}}  
     </head>
 
-    <body class="{{ block "bodyClass" .}}{{end}}">
+    <body class="{{block "bodyClass" .}}{{end}}">
       {{block "header" .}}
         <header>
           <a href="{{ site.BaseURL | relLangURL }}">
-          <img src="{{ site.BaseURL }}/image/logo.png" alt="Taskit Logo" 
-                      width="48" />
-                GmbH
-          </a>
+          <img src="{{partialCached "logo.svg" $ "nothing"}}" alt="taskit Logo" height="46" width="58" /></a>
           {{ partialCached "menu.html" (dict "Menu" site.Menus.main "Button" true) "main"}}
         </header>
     {{ end }}
