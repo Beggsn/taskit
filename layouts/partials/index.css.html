@@ -1,11 +1,5 @@
-{{/*    USING THE CONCAT API
-        Gets all css.tpl files
-        Combines them with index.css
-        Processes mustaches
-        Minifies the generated CSS file  */}}
-
-{{ $css := resources.Match "*.css.tpl" |           
-           resources.Concat "index.css" |
-           resources.ExecuteAsTemplate "index.css" "nothing" |
-           resources.Minify }}
+{{ $css := resources.Match "*.css.tpl" | resources.Concat "index.css" | resources.ExecuteAsTemplate "index.css" "nothing" | resources.Minify }}
 {{return $css.Permalink}}
+
+{{/*    USING THE CONCAT API, Gets all css.tpl files, Combines them with index.css
+        Processes mustaches, Minifies the generated CSS file  */}}

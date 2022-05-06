@@ -1,21 +1,39 @@
-{{/*Creates a new scratch pad*/}}
 {{$scratch := newScratch}}
 {{$products := resources.GetMatch "products.csv"}}
-{{/* Parses the CSV file using a comma as the separator*/}}
 {{$parsedProducts := $products | transform.Unmarshal (dict "delimiter" ",")}}
-{{/*Gets the first row as the index row*/}}
+
 {{$index := index $parsedProducts 0}}
-{{/* Loops through all the rows in the table */}}
+
 {{ range $i, $r := $parsedProducts }}
-  {{/* Ignores the first row of the table*/}}
   {{ if ne $i 0}}
     {{range $j := seq (sub (len $index) 1)}}
-      {{/* Creates a dictionary (map) in the scratch pad that points to another dictionary*/}}  
       {{ $scratch.SetInMap (index $r 0) (index $index $j) (index $r $j) }}
     {{ end }}
   {{ end }}
 {{ end }}
-{{/* Converts the scratch pad to a dictionary and return*/}}
+
 {{return $scratch.Values}}
 
-{{/**/}}
+
+
+{{/*Creates a new scratch pad*/}}
+
+{{/*  {{$scratch := newScratch}}
+{{$products := resources.GetMatch "products.csv"}}  */}}
+{{/* Parses the CSV file using a comma as the separator*/}}
+{{/*  {{$parsedProducts := $products | transform.Unmarshal (dict "delimiter" ",")}}  */}}
+{{/*Gets the first row as the index row*/}}
+{{/*  {{$index := index $parsedProducts 0}}  */}}
+{{/* Loops through all the rows in the table */}}
+{{/*  {{ range $i, $r := $parsedProducts }}  */}}
+  {{/* Ignores the first row of the table*/}}
+  {{/*  {{ if ne $i 0}}
+    {{range $j := seq (sub (len $index) 1)}}  */}}
+      {{/* Creates a dictionary (map) in the scratch pad that points to another dictionary*/}}  
+      {{/*  {{ $scratch.SetInMap (index $r 0) (index $index $j) (index $r $j) }}
+    {{ end }}
+  {{ end }}
+{{ end }}  */}}
+{{/* Converts the scratch pad to a dictionary and return*/}}
+{{/*  {{return $scratch.Values}}  */}}
+

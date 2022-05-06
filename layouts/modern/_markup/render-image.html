@@ -1,0 +1,14 @@
+
+{{/* Kontrolle der Bildgröße. 
+        findet die gebündelte Ressource und optimiert sie. 
+            Wenn das Ziel nicht gefunden wird, wird die URL unverändert verwendet.*/}}
+<img loading="lazy" src="
+{{with (.Page.Resources.GetMatch .Destination)}}
+	{{(.Resize "1000x").Permalink }} 
+{{else}}
+	{{ .Destination | safeURL }}
+{{end}}
+"
+alt="{{ .Text }}" 
+{{ with .Title}} title="{{ . }}"{{ end }}
+/>

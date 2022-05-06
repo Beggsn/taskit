@@ -7,6 +7,9 @@
         {{end}}
         <meta name="viewport" 
             content="width=device-width, initial-scale=1.0" />
+            {{/* Open Graph and Twitter cards */}}
+            {{ template "_internal/twitter_cards.html" . }}
+            {{ template "_internal/opengraph.html" . }}
             <link rel="icon" type="image/png" href="{{partialCached "favicon.png.html" $ "nothing"}}">
             {{/* Compiling SCSS into CSS */}}
             {{ $css := partialCached "index.css.html" $ "nothing"}}

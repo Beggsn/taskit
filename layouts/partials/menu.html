@@ -1,21 +1,21 @@
 {{with $.Menu }} 
-    <nav>
-        {{if $.Button}}
-            <button class="hamburger">&#9776;</button>
+  <nav>
+    {{if $.Button}}
+      <button class="hamburger">&#9776;</button>
+    {{end}}
+    <ul>
+    {{range $.Menu}}
+      <li>
+        <a href="{{.URL}}">{{.Name }}</a>
+        {{if .HasChildren}}
+          <ul>
+            {{ range .Children }}
+              <li><a href="{{.URL}}">{{.Name }}</a></li>
+            {{ end }}
+          </ul>
         {{end}}
-        <ul>
-        {{range $.Menu }}
-            <li>
-                <a href="{{.URL}}">{{.Name }}</a>
-                {{if .HasChildren}}
-                    <ul>
-                        {{ range .Children }}
-                        <li><a href="{{.URL}}">{{.Name }}</a></li>
-                        {{ end }}
-                    </ul>
-                {{end}}
-            </li>
-        {{end}}
-        </ul> 
-    </nav>
+      </li>
+    {{end}}
+    </ul> 
+  </nav>
 {{end}}
