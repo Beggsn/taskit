@@ -67,29 +67,6 @@
   {{end}}  */}}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <section id="description">
     {{.Content}}
   </section>
@@ -137,23 +114,8 @@
     <h1>Aus unserem Blog</h1>
     <ul class="posts">
       {{/*Anzahl der Post die über dem footer (Aus unserem Blog Bereich)gerendert werden*/}}
-      {{range first 3 .}}
-      <li class="post">
-        <a href="{{.Permalink}}">
-        {{/*  Hinzufügen eines Titelbildes für Blogbeiträge */}}  
-        {{$title := .Title}}
-        {{with (.Resources.GetMatch "cover.*")}}
-          <img alt="{{$title}}" loading="lazy" src="{{(.Resize "1000x webp").Permalink}}" />
-        {{end}}  
-          <h2>
-            {{.Title}}
-          </h2>
-          <article>
-            {{.Summary}}
-          </article>
-          <div>Weiter lesen</div>
-        </a>
-      </li>
+      {{range first 6 .}}
+        {{partialCached "card.html" . .Permalink}}
       {{end}}  
     </ul>
   </section>

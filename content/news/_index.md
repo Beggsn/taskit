@@ -8,6 +8,9 @@ menu:
     identifier: news
     weight: 1
     post: We are trending.
+cascade:
+  type: modern
+type: _default  
 ---
-![News](news.jpg){style="text-align:center"}
+![News](news.png){style="text-align:center"}
 -------------------------------------------

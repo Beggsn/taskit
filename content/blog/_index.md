@@ -10,9 +10,16 @@ menu:
     post: From our editors
   footer: 
     name: Blog
-    weight: 100  
+    weight: 100 
+    
+# Targeting cascading overrides
+cascade:
+- _target:
+    kind: page
+  layout: blog
+  type: modern 
 ---
-The Acme Blog
+Der Taskit Blog
 ============
 
-Curated content about our teams and products.
+Kuratierte Inhalte über unsere Teams und Produkte.

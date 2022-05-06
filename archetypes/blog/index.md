@@ -12,4 +12,4 @@ draft: false
 **Provide an awesome introduction here**
 <!--more-->
 
-Here goes the main content.
+Text hier einfügen ...
