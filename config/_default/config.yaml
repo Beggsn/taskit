@@ -10,3 +10,4 @@ theme: Eclectic
 enableEmoji: true
 enableGitInfo: true
 sectionPageMenu: sections
+paginate: 2 # erhöhen für mehr blöcke pro Seite

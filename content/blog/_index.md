@@ -17,7 +17,12 @@ cascade:
 - _target:
     kind: page
   layout: blog
-  type: modern 
+  type: modern
+  # Setting the kind section as the list type
+- _target:
+    kind: section
+  type: modern
+  layout: list     
 ---
 Der Taskit Blog
 ============
