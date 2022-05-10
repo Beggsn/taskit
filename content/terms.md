@@ -6,7 +6,7 @@ menu:
   footer:
     name: AGB's
     weight: 200
-type: modern 
+
 toc: true
 title: Allgemeinen Geschäftsbedingungen der taskit GmbH ver. 899-3
 ---

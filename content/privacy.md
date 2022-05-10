@@ -6,7 +6,7 @@ menu:
   footer:
     name: Datenschutz
     weight: 300
-type: modern    
+ 
 ---
 
 
