@@ -19,8 +19,9 @@ testimonials:
   - author: Lorem 
     from: Ipsum GmbH
     content: >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  
-type: modern # ohne type: xxx wird der der standard theme genutzt
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+cascade:
+  type: modern
 ---
 
 taskit **lorem** ipsom dolor

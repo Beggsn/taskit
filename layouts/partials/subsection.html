@@ -1,9 +1,11 @@
+{{/*  Partial to render an individual term as a card in the taxonomy list  */}}
+
 <li class="subsection">
     <a href="{{.Permalink}}">
       {{if .Title}}
-      <h3> {{.Title | humanize}} </h3>
+      <h3> {{.Title }} </h3>
       {{else if .File}}
-      <h3>{{.File.Path | path.Dir | path.Base | humanize}}</h3>
+      <h3>{{.File.Path | path.Dir | path.Base }}</h3>
       {{end}}
       <p>Pages: {{len .Pages}}</p>
       {{$words:= 0}}

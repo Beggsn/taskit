@@ -4,34 +4,17 @@
   <h1>{{.Title }}</h1> 
   <center>{{.Content}}</center>
   {{$pages := .RegularPages}}
-  {{range .Sections}}
-    {{/*  fügt alle untergeordneten Seiten an  */}}
+  {{range .Sections}}{{/*  fügt alle untergeordneten Seiten an  */}}
     {{$pages = append $pages .RegularPages}}
-  {{end}}
-  {{/* sortiert die Seiten nach Erstellungsdatum   */}}
-  {{$pages = sort $pages "Date" "desc" }} 
-    {{/* zeigt nur Unterabschnitte auf der ersten Seite an   */}}
+  {{end}}{{/* sortiert die Seiten nach Erstellungsdatum   */}}
+  {{$pages = sort $pages "Date" "desc" }}{{/* zeigt nur Unterabschnitte auf der ersten Seite an   */}}   
   {{ $paginator := .Paginate $pages }}
   {{if and (eq $paginator.PageNumber 1)            
             (gt (len .Sections) 0) }} {{/* zeigt nur Titel an, wenn Unterabschnitte vorhanden sind */}}
   <h2>Untersektionen</h2>
     <ul class="subsections">
     {{range .Sections}}
-      <li class="subsection">
-        <a href="{{.Permalink}}">
-            {{/* Verwendet den Ordnernamen, um eine sinnvolle Vorgabe zu machen*/}}
-          <h3>{{(default 
-          (.File.Path | path.Dir | path.Base) 
-            .Title) }}</h3>
-          <p>Pages: {{len .Pages}}</p>
-          {{$words:= 0}}
-            {{/*  summiert die Gesamtwortzahl aller untergeordneten Seiten  */}}
-            {{range .Pages}}
-              {{$words = add $words .WordCount}}
-            {{end}}
-          <p>Words: {{$words}}</p>
-        </a>
-      </li>
+      {{partialCached "subsection" . .Permalink}}
     {{end}}
     </ul>
   <h2>Posts</h2>
