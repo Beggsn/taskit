@@ -1,13 +1,10 @@
 ---
 title: "Linie"
 date: 2022-04-26T11:55:28+02:00
-draft: false
-tags: [tag2, tag3]
-categories: [Stamp, Development]
+series: [manufacturing]
+tags: [manufacturing]
+categories: [shape, Development, manufacturing]
 ---
-## Preis
-
-Der Test-Betrag beträgt `{{< price product="Linie" >}}`.
 
 Nullam commodo eros mattis volutpat vulputate. Vestibulum egestas porta purus, ac venenatis erat malesuada quis. Maecenas tempus turpis at magna congue, sit amet tempus augue porta. Aenean ante quam, euismod non massa eget, sagittis malesuada est. Praesent eu diam luctus, elementum metus in, porttitor tellus. Suspendisse a ligula iaculis, condimentum nibh nec, pretium diam. Sed vel eros tellus. Duis nec ante eget diam dignissim pretium sed ut tortor. Cras pellentesque dui posuere ex tempus semper. Nam in consequat arcu. Morbi cursus lectus et felis volutpat, at vehicula mauris molestie. Donec a eros ultricies, porta libero et, semper est.
 

@@ -1,0 +1,20 @@
+{{define "bodyClass"}}page terms{{end}}
+{{define "body"}} 
+<main>
+  <h1>
+    {{.Title | humanize}}
+  </h1> 
+  <center>{{.Content}}</center>
+  {{with .Data.Terms.Alphabetical}}
+    <ul class="subsections">
+      {{ range .}}
+        {{partialCached "subsection" .Page .Page.Permalink}}
+      {{ end }}
+    </ul>
+  {{end}}
+</main>
+{{end}}
+
+{{/*  der Titel der terms page  
+      führt eine Schleife durch die Begriffe 
+      in dieser Taxonomie in alphabetischer Reihenfolge  */}}

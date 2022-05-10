@@ -1,15 +1,10 @@
 ---
+title: "Tropical"
 date: 2022-05-02T13:33:00+02:00
-title: "Rechteck"
-tags:
-  - unknown
-categories:
-  - general
-
-draft: false
+tags: [shape, product]
+categories: [shape, design]
 ---
 
-Der Test-Betrag beträgt `{{< price product="Rechteck">}}`.
 
 Nunc purus dui, commodo sed aliquet sit amet, dapibus vitae turpis. Vestibulum id euismod odio. Morbi feugiat enim eros, ut blandit mauris euismod id. Suspendisse tincidunt sem vitae mi vulputate volutpat. Sed pulvinar metus eu diam malesuada molestie. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur molestie vulputate felis vitae placerat. Sed sed diam vitae ligula eleifend placerat vel at augue. Donec vestibulum nulla magna, eu imperdiet risus condimentum a. Vivamus blandit turpis ut nibh iaculis finibus. Sed dictum felis eu lectus porta lobortis.
 

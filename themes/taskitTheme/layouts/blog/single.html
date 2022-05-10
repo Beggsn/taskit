@@ -1,0 +1,73 @@
+{{/*  Blog layout mit Sidebar  */}}
+
+{{/*  Umhüllung in einem Inhaltsbereich zur Unterscheidung von Kopf- und Fußzeile. 
+    Gleicher Haupt-Tag wie bei einer normalen Einzelseite. 
+    Aside ist ein guter HTML-Tag für eine Seitenleiste. 
+    Hugo berechnet die ungefähre Lesezeit auf der Grundlage der Wortanzahl und der Zeichenlänge. 
+    Gibt dem Benutzer eine ungefähre Wortzahl an die Hand. Führt eine Schleife durch die angegebenen Tags. 
+    Konvertiert jeden Tag-Pfad in einen sprachspezifischen URL-Link "{{-" stellt sicher,
+    dass zwischen /tags/ und dem Tag-Namen kein Leerzeichen vorhanden ist. */}}
+
+
+    {{define "bodyClass"}} 
+    {{ path.Dir .Page.FirstSection.File.Path }} page 
+    {{end}}
+    
+    {{define "body"}}
+    <div id="content">
+      <main>
+        {{$img := .Resources.GetMatch "cover.*"}}
+        {{ if $img }}
+        <img alt="{{.Title}}" width="1920" height="400" loading="lazy" src="{{($img.Fill "1920x400").Permalink}}">
+        {{ end }}
+        {{with .Title}}
+          <h1>
+            {{.}}
+          </h1>
+        {{end}}
+        {{if .Param "toc"}}
+          <h2>Table of Contents</h2>
+          {{.TableOfContents}}
+        {{end}}
+        <div class="content">
+          {{.Content}}
+        </div>
+      </main>
+      <aside>
+        <section> 
+          <h2>Information</h2> 
+          <p>{{.Summary}}</p>
+        </section>
+        <section>
+          <h2>Lesezeit ca.</h2>
+          <p>{{.ReadingTime}} min.</p> 
+        </section>
+        <section>
+          <h2>Anzahl der Wörter</h2>
+          <p>≈ {{.FuzzyWordCount}}</p> 
+        </section>
+        {{with .Params.tags}}
+        <section>
+          <h2>Tags</h2> 
+          {{range .}} 
+            <p>
+              <a href="{{"/tags/" | relLangURL}}{{. | urlize}}"> 
+                {{. }}
+              </a> 
+            </p>
+          {{end}}
+        </section>
+        {{end}}
+      </aside>
+    </div>
+    {{with site.RegularPages.Related .}}
+    <div id="related">
+    <h2>verwandte Seiten</h2>
+    <ul class="posts">
+        {{range first 5 .}}
+        {{partialCached "card.html" . .Permalink}}
+        {{end}}
+    </ul>
+    </div>
+    {{end}}
+    {{end}}

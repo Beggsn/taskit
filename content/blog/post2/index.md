@@ -1,13 +1,9 @@
 ---
 title: "Quadrat"
 date: 2022-04-26T11:55:24+02:00
-draft: false
-tags: [tag1, tag2]
-categories: [GPIO, Development]
+tags: [manufacturing, shape]
+categories: [manufacturing, Development]
 ---
-## Preis
-
-Der Test-Betrag beträgt `{{< price product="Quadrat" >}}`.
 
 Suspendisse porttitor nunc eros, vitae elementum arcu consequat sit amet. Maecenas id lacus vel arcu egestas maximus. Quisque iaculis orci sed pharetra molestie. Mauris fringilla ultricies orci non accumsan. Cras ut eros at leo lacinia placerat. Maecenas vitae elit tortor. Sed nisi turpis, iaculis sit amet sem sed, scelerisque elementum magna. Cras quis augue vel velit bibendum feugiat bibendum in nibh. Nullam sodales quis ligula sit amet ultricies.
 

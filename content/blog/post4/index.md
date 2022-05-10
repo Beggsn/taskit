@@ -1,14 +1,10 @@
 ---
-title: "Rhombus"
+title: "Building Squares"
 date: 2022-04-26T11:55:32+02:00
-draft: false
-tags: [tag2, tag3]
-categories: [testcategorie, Development]
-series: [Testserie]
+tags: [shape, manufacturing]
+categories: [Development]
+series: [manufacturing]
 ---
-## Preis
-
-Der Test-Betrag beträgt `{{< price product="Rhombus">}}`
 
 Vivamus non rutrum lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam nunc ante, ultrices eu dolor nec, tempor vestibulum sapien. Nullam tempor est sapien, nec pharetra tortor condimentum ut. In ac justo euismod, dictum eros sed, efficitur mauris. Praesent nec lacinia nisl. Fusce nec purus accumsan, vulputate nisl vitae, malesuada velit. Proin accumsan libero quis augue ullamcorper fringilla. Integer quis metus ut nunc rutrum ultricies. Aliquam pretium turpis consequat tellus placerat pellentesque. Mauris ac semper eros, et aliquet lorem. Nulla laoreet a lacus eu consequat. Suspendisse vehicula sem lectus, a faucibus orci dignissim a. Integer placerat, nunc ac ornare maximus, libero ex tincidunt quam, eget fringilla diam sem vel lorem.
 

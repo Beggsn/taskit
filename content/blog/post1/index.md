@@ -1,15 +1,10 @@
 ---
 title: "Kreis"
 date: 2022-04-26T11:55:12+02:00
-draft: false
-tags: [tag1, tag2]
-categories: [Test Kategorie, Development]
+series: [manufacturing]
+tags: [manufacturing]
+categories: [circle, manufacturing]
 ---
-## Preis
-
-Der Test-Betrag beträgt `{{< price "Kreis" >}}`.
-
-{{% productInfo %}}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor sodales erat, vel fermentum leo suscipit ut. Proin id porttitor lectus. Aenean varius quam justo, sed bibendum eros suscipit a. Praesent molestie, nibh ac interdum bibendum, diam tellus porta nisl, et aliquam velit augue eu felis. Sed vel tincidunt metus. Donec lacinia maximus ultricies. Fusce pulvinar maximus nisi. Phasellus varius et arcu a egestas. Curabitur quis egestas ligula, eu tincidunt erat.
 
