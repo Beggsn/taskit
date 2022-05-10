@@ -6,8 +6,8 @@
 baseURL:  ./ # ./ oder  "" leerer sting
 languageCode: de-de
 title: Taskit GmbH
+theme: taskit
 enableEmoji: true
 enableGitInfo: true
 sectionPageMenu: sections
-paginate: 2 # erhöhen für mehr blöcke pro Seite
-# theme: 
+paginate: 3 # erhöhen für mehr blöcke pro Seite
