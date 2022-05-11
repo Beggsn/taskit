@@ -1,0 +1,17 @@
+<li class="post news-item"> {{/* fügt die Klasse news-item hinzu */}}
+  <div class="badge"> {{/* hinzufügen eines Abzeichens für die News Zusammenfassungen */}}
+    News 
+  </div>
+  {{with (.Resources.GetMatch "cover.*")}}
+    <img alt="{{$.Title}}" loading="lazy" src="{{(.Resize "1000x").Permalink}}" />
+  {{end}}
+  <a href="{{.Permalink}}">
+    <h2>
+      {{.Title}}
+    </h2>
+    <article>
+      {{.Summary}} 
+    </article>
+    <div>Lesen Sie mehr</div>
+  </a>
+</li>

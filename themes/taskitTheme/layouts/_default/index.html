@@ -115,7 +115,7 @@
     <ul class="posts">
       {{/*Anzahl der Post die über dem footer (Aus unserem Blog Bereich)gerendert werden*/}}
       {{range first 3 .}}
-        {{partialCached "card.html" . .Permalink}}
+        {{.Render "card"}}
       {{end}}  
     </ul>
   </section>

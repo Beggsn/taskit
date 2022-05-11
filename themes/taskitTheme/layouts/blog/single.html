@@ -65,7 +65,7 @@
     <h2>verwandte Seiten</h2>
     <ul class="posts">
         {{range first 5 .}}
-        {{partialCached "card.html" . .Permalink}}
+          {{.Render "card"}}
         {{end}}
     </ul>
     </div>
