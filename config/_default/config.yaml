@@ -9,4 +9,4 @@ title: Taskit GmbH
 theme: taskitTheme
 enableEmoji: true
 enableGitInfo: true
-# paginate: 3 # erhöhen für mehr blöcke pro Seite
+paginate: 3 # erhöhen für mehr blöcke pro Seite

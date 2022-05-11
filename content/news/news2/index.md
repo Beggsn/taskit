@@ -1,7 +1,6 @@
 ---
 title: "Feugiat nulla facilisis"
-date: 2022-04-26T11:57:15+02:00
-draft: false
+tags: [shape, style, manufacturing]
 categories: [public, news]
 ---
 

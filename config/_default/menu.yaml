@@ -14,7 +14,7 @@ main:
     name: Kontakt
     url: /contact
     weight: 4
-    
+    post: At your service
   - identifier: privacy
     name: Datenschutz
     url: /privacy
@@ -33,7 +33,7 @@ main:
     name: Über uns
     url: /about  
     weight: 8
-    
+    post: Our facinating origins
   - identifier: test
     name: Developer Ecke
     url: /test

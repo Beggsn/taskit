@@ -1,7 +1,7 @@
 {{define "bodyClass"}}page list{{end}}
 {{define "body"}} 
 <main>
-  <h1>{{$.CurrentSection.Data.Singular | humanize}} - {{.Title | humanize}}</h1>
+  <h1>{{$.CurrentSection.Data.Singular }} - {{.Title }}</h1>
   <center>{{.Content}}</center>
   {{$pages := .RegularPages}}
   {{range .Sections}}
@@ -11,7 +11,7 @@
   {{ $paginator := .Paginate $pages }}
   {{if and (eq $paginator.PageNumber 1)
             (gt (len .Sections) 0) }}
-  <h2>Subsections</h2>
+  <h2>unter Sektionen</h2>
     <ul class="subsections">
     {{range .Sections}}
       {{partialCached "subsection" . .Permalink}}
