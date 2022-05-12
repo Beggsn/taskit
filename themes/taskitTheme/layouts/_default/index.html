@@ -106,8 +106,8 @@
   {{with 
     (where site.RegularPages 
     ".Section" "in" site.Params.mainSections)
-  }}
 
+  }}
 
   {{/* main section "Aus unserem Blog"*/}}
   <section id="blog">
@@ -121,19 +121,33 @@
   </section>
   {{end}} 
 
-  
   {{/* main section "Erfahrungsberichte"*/}}
   {{ with .Param "testimonials" }}
     <section id="testimonials">
-    <h1>Kunden Erfahrungsberichte</h1>
+    <h1>aktuelle Posts und Erfahrungsberichte</h1>
     <div>
       <ol>
         {{ range .}}
+        {{/*  Speichert die Daten in Variablen, so dass man sie aus dem Tweet heraus überschreiben kann.*/}}
+        {{$author := default "" .author}}
+        {{$content := default "" .content}}
+        {{$from := default "" .from}}
+        {{/* Aufruf von getJSON befindet sich in der if-Anweisung so dass man ihn aufrufen kann, wenn Daten von Twitter benötigt werden.*/}}
+        {{if .tweet}}
+          {{$tweet := getJSON
+            "https://publish.twitter.com/oembed?url=" 
+            .tweet  "&omit_script=1&hide_media=1&hide_thread=1&dnt=true" }}
+          {{$author = $tweet.author_name }}
+          {{$from = "via Twitter"}}
+          {{$content = $tweet.html }}
+        {{end}}        
         <li>
-          <p>{{.content}}</p>
+          {{/*  Twitter gibt HTML zurück, im Gegensatz zu einfachem Text, den Hugo nicht escapen sollte.  */}}
+          <p>{{$content | safeHTML}}</p>
           <div>
-            <h2>{{.author}}</h2>
-            <h3>{{.from}}</h3>
+            {{/*  Der Rendering-Code wird wie bisher verwendet.  */}}
+            <h2>{{$author | title}}</h2>
+            <h3>{{$from}}</h3>
           </div>
         </li>
         {{ end }}

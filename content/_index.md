@@ -5,20 +5,15 @@ description: Willkommen auf der taskit Webseite.
 subtitle: Willkommen auf der **taskit** Webseite.(subtitle)
 explore: blog
 testimonials:
-  - author: Müller 
-    from: Fictional Gmbh
-    content: >
-              Aliquam sem et tortor consequat id porta.
-
-  - author: Schmitt 
-    from: 0815 GmbH
-    content: >
-              Tempor commodo ullamcorper a lacus vestibulum.
-
+#       echte tweets können hier platziert werde  
+  - tweet: https://twitter.com/taskitberlin/status/791557866993885184
+  - tweet: https://twitter.com/taskitberlin/status/791557467624902656
+  - tweet: https://twitter.com/taskitberlin/status/701791852278784001
   - author: Lorem 
     from: Ipsum GmbH
     content: >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
 
 ---
 
