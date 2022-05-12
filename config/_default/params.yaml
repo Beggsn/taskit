@@ -3,22 +3,3 @@ color: "#e20074" # Farbschema "Razzmatazz"
 # alle infos zu der farbe http://html-color.org/de/e20074
 
 copyright: "Copyright &copy; 2022 Taskit."
-footer:
-  - title: Über uns
-    content: >
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-  - title: Aktuelle Blog Posts
-    recents: blog
-    recentCount: 7
-  - title: Kontakt
-    contact: true
-  - title: Wichtige Links
-    menu: true    
-style: red
-logo: /image/logo.png
-logo_small: /image/logo.png
-about_us: >
-  Curae semper nostra aptent fusce ad. Fames si nascetur adipiscing aptent mattis porta purus libero amet. Ex semper class penatibus odio quisque malesuada.
-recent_posts:
-  enable: true
