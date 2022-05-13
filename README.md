@@ -1,0 +1,1 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3af2b85d-a5b5-4388-8f5c-762c386ca976/deploy-status)](https://app.netlify.com/sites/taskitlandingpage/deploys)
