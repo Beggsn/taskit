@@ -102,15 +102,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 __Youtube Shortcode__
 {{< youtube id="nLAVanlu5js" >}}
 
-{{< divider >}}
-
-__Nested Shortcode__
-
-{{< highlight html "linenos=table, hl_lines=3-4 6,linenostart=1080" >}} 
- 
-{{</* youtube nLAVanlu5js */>}} 
- {{< youtube nLAVanlu5js >}}
-{{</ highlight >}} 
 
 __Build-In Shortcodes__
 
@@ -123,12 +114,3 @@ __Build-In Shortcodes__
 * highlight - Adds syntax highlighting for the provided source code.
 * param - Prints a passed parameter (useful for debugging purposes as well)
 
-{{< divider >}}
-
-__Inline Shortcodes__
-
-*{*{< reuse.inline />}} as HTML
-
-*{*{%reuse.inline /%}} as Markup
-
-{{< divider >}}
