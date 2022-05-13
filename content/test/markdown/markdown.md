@@ -20,8 +20,6 @@ content:
         content: Der Licht-zu-Digital-Sensor OPT3002 von Texas Instruments bietet die Funktion eines optischen Lichtleistungsmessers in nur einer Komponente...
 ---
 
-Markdown
-===========
 
 I am a paragraph in markdown with line
 wrapping so fit in this width.
@@ -232,6 +230,7 @@ Gabby
 
 
 *Highlight*
+
 {{< highlight js "linenos=table,hl_lines=3-4,linenostart=1080" >}}
 // Enjoy your work
 if (!tired()) {
@@ -240,8 +239,7 @@ if (!tired()) {
     drinkCoffee();
 }
 
-<!-- Output -->
-{{< youtube nLAVanlu5js >}}
-{{</ highlight >}}
+
+
 
 
