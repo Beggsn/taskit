@@ -3,7 +3,7 @@
 # hugo convert toJSON <content file> oder 
 # hugo convert toYAML <content file>
 
-baseURL:  ./ # ./ oder  "" leerer sting
+baseURL:  "" # ./ oder  "" leerer sting
 languageCode: de-de
 title: Taskit GmbH
 theme: taskitTheme
