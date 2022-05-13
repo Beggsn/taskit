@@ -19,24 +19,36 @@
       {{.Content}}
     </div>
 
+    {{/*  verwendet getenv zur Überprüfung von Umgebungsvariablen  */}}
+    {{if getenv "NETLIFY" }}
     {{/*  Das Formular ist einfaches HTML  */}}
-    <form name="contact" netlify="true" >
-        <div>
-          <label for="name">Name:</label>
-          <input id="name" name="name" type="text" required>
-        </div>
-        <div>
-          <label for="email">Email:</label>
-          <input id="email" name="email" type="email" required>
-        </div>
-        <div>
-          <label for="message">Nachricht:</label>
-          <textarea id="message" name="message" cols="50" rows="10" required></textarea>
-        </div>
-        <div>
-          <button type="submit">Senden</button>
-        </div>
-    </form>
+      <form name="contact" netlify-honeypot="true" >
+    {{else }}
+      <form action="https://formspree.io/f/{{.Param "contact"}}" method="post">
+    {{end}}      
+          <div>
+            <label for="name">Name:</label>
+            <input id="name" name="name" type="text" required>
+          </div>
+          <div>
+            <label for="email">Email:</label>
+            {{/*  eine Antwort auf die Frage  */}}
+            <input 
+              {{ if getenv "NETLIFY" }}
+                id="email" name="email"
+              {{else }}
+                name="_replyto"
+              {{end }}    
+              type="email" required>
+          </div>
+          <div>
+            <label for="message">Nachricht:</label>
+            <textarea id="message" name="message" cols="50" rows="10" required></textarea>
+          </div>
+          <div>
+            <button type="submit">Senden</button>
+          </div>
+      </form>
   </div>
 </main>
 {{end}}
