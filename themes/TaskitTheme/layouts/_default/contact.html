@@ -20,7 +20,7 @@
     </div>
 
     {{/*  Das Formular ist einfaches HTML  */}}
-    <form>
+    <form netlify="true" name="Contact">
         <div>
           <label for="name">Name:</label>
           <input id="name" name="name" type="text" required>
@@ -30,11 +30,11 @@
           <input id="email" name="email" type="email" required>
         </div>
         <div>
-          <label for="message">Message:</label>
+          <label for="message">Nachricht:</label>
           <textarea id="message" name="message" cols="50" rows="10" required></textarea>
         </div>
         <div>
-          <button type="submit">Send</button>
+          <button type="submit">Senden</button>
         </div>
     </form>
   </div>
