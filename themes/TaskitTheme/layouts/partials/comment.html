@@ -1,15 +1,19 @@
 <div class="comments">
-    <h3> Comments </h3>
+    <h3> Kommentar </h3>
     {{ if .Disabled  }}
       <div>
-        Comments have been disabled by the website administrator.
+        Die Kommentare wurden vom Administrator der Website deaktiviert.
       </div>
     {{ else }}
+      {{/*  Die Verwendung von RelPermalink aus den Params als $.Page ist in einem Partial nicht verfügbar.  */}}
       {{if getenv "NETLIFY" }}
+        {{/*  Verwendet Comments als Formularname, damit wir ein einziges Formular für alle Kommentare haben.  */}}
         <form netlify="true" name="Comments">
       {{ else }}
+        {{/*  Ruft die Kommentarformular-Aktion für Formularanbieter wie Formspree ab.  */}}
         <form action="https://formspree.io/f/{{.FormspreeCommentForm}}" method="post">
       {{ end }}
+      {{/*  Fügt ein verstecktes Feld mit der URL der Seite hinzu.  */}}
       <input type="hidden" name="url" value="{{.RelPermalink}}">
         <div>
           <label for="name">Name:</label>

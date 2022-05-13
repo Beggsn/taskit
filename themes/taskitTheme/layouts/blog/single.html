@@ -26,7 +26,7 @@
           </h1>
         {{end}}
         {{if .Param "toc"}}
-          <h2>Table of Contents</h2>
+          <h2>Inhaltsverzeichnis</h2>
           {{.TableOfContents}}
         {{end}}
         <div class="content">
@@ -60,6 +60,18 @@
         {{end}}
       </aside>
     </div>
+    {{/*  Hinweis: Hinweis: Durch die Verwendung von CommentDisabled: true 
+                   im Front Matter werden Kommentare auf einer einzelnen Seite deaktiviert.
+                   Wenn man es innerhalb der cascade in _index.md platziert, 
+                   werden Kommentare in einem Abschnitt deaktiviert, 
+                   oder wenn man es in config/_default/params.yaml platziert, 
+                   werden Kommentare für die gesamte Website deaktiviert.  */}}
+    {{ partial "comment.html" (dict 
+      "FormspreeCommentForm" ($.Param "FormspreeCommentForm")
+      "RelPermalink" .Page.RelPermalink 
+      "Disabled" ($.Param "CommentDisabled")
+    ) }}
+    {{/*   Laden des Kommentarformulars  */}}
     {{with site.RegularPages.Related .}}
     <div id="related">
     <h2>verwandte Seiten</h2>
@@ -70,4 +82,5 @@
     </ul>
     </div>
     {{end}}
+
     {{end}}
