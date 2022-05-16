@@ -3,7 +3,7 @@
 # hugo convert toJSON <content file> oder 
 # hugo convert toYAML <content file>
 
-baseURL:  ./ # ./ oder  "" leerer sting
+baseURL:  "" # ./ oder  "" leerer sting
 languageCode: de-de
 title: Taskit GmbH
 theme: taskitTheme
@@ -14,8 +14,8 @@ module:
   hugoVersion:
     min: 0.91.2
   imports:
-    #path: github.com/hugoinaction/AcmeCommon
-    #path: github.com/hugoinaction/hugo-debug-utils
+    path: github.com/hugoinaction/AcmeCommon
+    path: github.com/hugoinaction/hugo-debug-utils
     path: github.com/hugoinaction/AcmeSupport
     mounts:
       - source: assets

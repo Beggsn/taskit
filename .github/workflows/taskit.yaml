@@ -1,9 +1,11 @@
-name: pages-build-deployment
+name: GitHub pages
+
 on:
   push:
     branches:
       - master
   workflow_dispatch:
+
 jobs:
   deploy:
     runs-on: ubuntu-18.04
@@ -11,6 +13,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
@@ -18,7 +21,7 @@ jobs:
           extended: true
 
       - name: Build
-        run: hugo # --minify --baseURL=https://hugoinaction.github.io/GitHubPages
+        run: hugo --minify --baseURL=https://hugoinaction.github.io/GitHubPages
         env:
           COMMENTS_TOKEN: ${{ secrets.COMMENTS_TOKEN }}
 
