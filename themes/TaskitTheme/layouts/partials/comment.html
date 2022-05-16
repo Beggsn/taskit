@@ -10,10 +10,16 @@
   {{range (index $comments .RelPermalink)}}
   <div class="comment">
     <img width="100" height="100" alt="{{.name}} Avatar" src="https://www.gravatar.com/avatar/{{ md5 .email }}?s=100&d=wavatar">
-    <div class="author">{{.name}}</div>
+        {{ with .Err }}
+          {{ warnf "%s" . }}
+        {{ else }}
+          src="{{ .RelPermalink }}"
+        {{end}}
+      <div class="author">{{.name}}</div>
     <div class="message">{{.message}}</div>
   </div>
   {{end}}
+  
   {{ if .Disabled  }}
     <div>
       Die Kommentare wurden vom Administrator der Website deaktiviert.
