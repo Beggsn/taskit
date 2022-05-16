@@ -66,11 +66,7 @@
                    werden Kommentare in einem Abschnitt deaktiviert, 
                    oder wenn man es in config/_default/params.yaml platziert, 
                    werden Kommentare für die gesamte Website deaktiviert.  */}}
-    {{ partial "comment.html" (dict 
-      "FormspreeCommentForm" ($.Param "FormspreeCommentForm")
-      "RelPermalink" .Page.RelPermalink 
-      "Disabled" ($.Param "CommentDisabled")
-    ) }}
+    
     {{/*   Laden des Kommentarformulars  */}}
     {{with site.RegularPages.Related .}}
     <div id="related">
@@ -82,5 +78,9 @@
     </ul>
     </div>
     {{end}}
-
+    {{ partial "comment.html" (dict 
+          "FormspreeCommentForm" ($.Param "FormspreeCommentForm")
+          "RelPermalink" .Page.RelPermalink 
+          "Disabled" ($.Param "CommentDisabled")
+        ) }}
     {{end}}
