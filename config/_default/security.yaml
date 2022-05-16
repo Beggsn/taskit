@@ -1,4 +1,5 @@
 enableInlineShortcodes: true
 funcs:
   getenv:
-    - NETLIFY 
+    - NETLIFY
+    - COMMENTS_TOKEN 
