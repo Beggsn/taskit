@@ -4,3 +4,4 @@ copyright: "Copyright &copy; 2022 Taskit."
 # Hinzufügen einer Formspree-ID
 FormspreeCommentForm: mknykzqr
 NetlifyCommentForm: 5f6af880fd7ebf0007984d2f # testweise !!!!
+RemoveFormOnSubmission: true
