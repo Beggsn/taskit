@@ -18,13 +18,29 @@
         {{/*  Dies zeigt den Inhalt im Markdown-Format oberhalb des Kontaktformulars.  */}}
       {{.Content}}
     </div>
+    {{/*  Vorlage für die Erfolgsmeldung  */}}
+    <template id="contact-success">
+      <div class="success">
+        {{/*  Verwendet die Standardfunktion, um Standarddaten für ein Kommentarformular bereitzustellen
+              und die Funktion $.Param, um das Lesen von Front Matter zu ermöglichen 
+              und greift bei Bedarf auf die Website-Konfiguration zurück  */}}
+      {{default "Vielen Dank, dass Sie uns kontaktiert haben. Sie werden bald von uns hören." ($.Param "contact-success")}}
+    </div>
+    </template>
+
+    <template id="contact-error">
+      <div class="error">
+        {{/*  siehe oben  */}}
+        {{default "Beim Absenden des Kontaktformulars ist ein Problem aufgetreten. Bitte versuchen Sie es später noch einmal." ($.Param "contact-error")}}
+      </div>
+    </template>
 
     {{/*  verwendet getenv zur Überprüfung von Umgebungsvariablen  */}}
     {{if getenv "NETLIFY" }}
     {{/*  Das Formular ist einfaches HTML  */}}
-      <form name="contact" netlify-honeypot="true" >
+      <form data-dynamic-form data-success="#contact-success" data-error="#contact-error" netlify="true" name="Contact">
     {{else }}
-      <form action="https://formspree.io/f/{{.Param "contact"}}" method="post">
+    <form data-dynamic-form data-success="#contact-success" data-error="#contact-error" action="https://formspree.io/f/{{.Param "contact"}}" method="post">
     {{end}}      
           <div>
             <label for="name">Name:</label>

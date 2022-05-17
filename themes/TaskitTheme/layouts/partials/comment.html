@@ -10,25 +10,36 @@
   {{range (index $comments .RelPermalink)}}
   <div class="comment">
     <img width="100" height="100" alt="{{.name}} Avatar" src="https://www.gravatar.com/avatar/{{ md5 .email }}?s=100&d=wavatar">
-        {{ with .Err }}
-          {{ warnf "%s" . }}
-        {{ else }}
-          src="{{ .RelPermalink }}"
-        {{end}}
-      <div class="author">{{.name}}</div>
+    <div class="author">{{.name}}</div>
     <div class="message">{{.message}}</div>
   </div>
   {{end}}
-  
   {{ if .Disabled  }}
     <div>
       Die Kommentare wurden vom Administrator der Website deaktiviert.
     </div>
   {{ else }}
+  {{/*  Template für die Erfolgsmeldung  */}}
+  <template id="comment-success">
+    <div class="success">
+      {{default "Ihr Kommentar wurde erfolgreich zur Moderation weitergeleitet. Er wird bald auf der Website verfügbar sein." (site.Param "comment-success")}}
+    </div>
+  </template>
+  {{/*  Template für die Fehlermeldung  */}}
+  <template id="comment-error" >
+    <div class="error">
+      {{default "Bei der Übermittlung des Kommentars ist ein Problem aufgetreten. Bitte versuchen Sie es später noch einmal." (site.Param "comment-error")}}
+    </div>
+  </template>
+  
+  {{/*  Aktualisiert das Formular mit der Eigenschaft data-*, die von JavaScript gelesen werden soll  */}}
+  <form data-dynamic-form
+  data-success="#comment-success"
+  data-error="#comment-error"
     {{if getenv "NETLIFY" }}
-      <form netlify="true" name="Comments">
+      netlify="true" name="Comments">
     {{ else }}
-      <form action="https://formspree.io/f/{{.FormspreeCommentForm}}" method="post">
+      action="https://formspree.io/f/{{.FormspreeCommentForm}}" method="post">
     {{ end }}
     <input type="hidden" name="url" value="{{.RelPermalink}}">
       <div>
