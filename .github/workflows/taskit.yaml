@@ -1,4 +1,4 @@
-name: Taskit pages
+name: GitHub pages
 
 on:
   push:

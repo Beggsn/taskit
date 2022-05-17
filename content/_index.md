@@ -9,12 +9,12 @@ testimonials:
   - tweet: https://twitter.com/taskitberlin/status/791557866993885184
   - tweet: https://twitter.com/taskitberlin/status/791557467624902656
   - tweet: https://twitter.com/taskitberlin/status/701791852278784001
+  
   - author: Lorem 
     from: Ipsum GmbH
     content: >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-
+outputs: [html, json]
 ---
 
 taskit **lorem** ipsom dolor
