@@ -1,0 +1,25 @@
+{
+  "name": "taskittheme",
+  "version": "1.0.0",
+  "description": "Test Webseite für die Taskit GmbH",
+  "main": "index.js",
+  "devDependencies": {
+    "fuse.js": "^6.6.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Beggsn/taskit.git"
+  },
+  "keywords": [
+    "taskit"
+  ],
+  "author": "Berkant Cetin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Beggsn/taskit/issues"
+  },
+  "homepage": "https://github.com/Beggsn/taskit#readme"
+}

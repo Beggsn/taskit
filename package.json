@@ -1,0 +1,14 @@
+{
+  "comments": {
+    "dependencies": {},
+    "devDependencies": {
+      "fuse.js": "taskitTheme"
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "fuse.js": "^6.6.2"
+  },
+  "name": "taskit",
+  "version": "0.1.0"
+}
