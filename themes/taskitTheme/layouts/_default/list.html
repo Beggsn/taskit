@@ -4,13 +4,17 @@
   <h1>{{.Title }}</h1> 
   <center>{{.Content}}</center>
   {{$pages := .RegularPages}}
-  {{range .Sections}}{{/*  fügt alle untergeordneten Seiten an  */}}
+  {{range .Sections}}
+    {{/*  fügt alle untergeordneten Seiten an  */}}
     {{$pages = append $pages .RegularPages}}
-  {{end}}{{/* sortiert die Seiten nach Erstellungsdatum   */}}
-  {{$pages = sort $pages "Date" "desc" }}{{/* zeigt nur Unterabschnitte auf der ersten Seite an   */}}   
+  {{end}}
+  {{/* sortiert die Seiten nach Erstellungsdatum   */}}
+  {{/* zeigt nur Unterabschnitte auf der ersten Seite an   */}}
+  {{$pages = sort $pages "Date" "desc" }}   
   {{ $paginator := .Paginate $pages }}
+  {{/* zeigt nur Titel an, wenn Unterabschnitte vorhanden sind */}}
   {{if and (eq $paginator.PageNumber 1)            
-            (gt (len .Sections) 0) }} {{/* zeigt nur Titel an, wenn Unterabschnitte vorhanden sind */}}
+            (gt (len .Sections) 0) }} 
   <h2>Untersektionen</h2>
     <ul class="subsections">
     {{range .Sections}}

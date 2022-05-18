@@ -2,6 +2,7 @@
   <div class="badge"> {{/* hinzufügen eines Abzeichens für die News Zusammenfassungen */}}
     News 
   </div>
+  
   {{with (.Resources.GetMatch "cover.*")}}
     <img alt="{{$.Title}}" loading="lazy" src="{{(.Resize "1000x").Permalink}}" />
   {{end}}
