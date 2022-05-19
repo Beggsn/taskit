@@ -2,8 +2,8 @@
 layout: editor
 menu: 
   main:
-    name: SVG-Editor
+    name: Editor
     identifier: editor
     weight: 130
-    post: SVG Editor - Bauen Sie es auf Ihre Weise
+    # post: SVG Editor - Bauen Sie es auf Ihre Weise
 ---
