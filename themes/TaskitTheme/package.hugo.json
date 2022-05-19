@@ -14,7 +14,11 @@
     "url": "git+https://github.com/Beggsn/taskit.git"
   },
   "keywords": [
-    "taskit"
+    "taskit",
+    "Theme",
+    "Hugo",
+    "in",
+    "Action"
   ],
   "author": "Berkant Cetin",
   "license": "ISC",
