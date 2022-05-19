@@ -1,5 +1,7 @@
 import Fuse from 'fuse.js'
 // erstellt eine Modulvariable zur Speicherung des in allen Funktionen zu verwendenden Index
+import AcmeSearchSupport from "SearchSupport" 
+
 let index = null;
 const MAX_SEARCH_RESULTS = 5;
 

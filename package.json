@@ -2,11 +2,13 @@
   "comments": {
     "dependencies": {},
     "devDependencies": {
+      "@easylogic/editor": "project",
       "fuse.js": "taskitTheme"
     }
   },
   "dependencies": {},
   "devDependencies": {
+    "@easylogic/editor": "0.10.72",
     "fuse.js": "^6.6.2"
   },
   "name": "taskit",
