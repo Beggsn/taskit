@@ -1,4 +1,4 @@
-module TaskitWebsite
+module github.com/Beggsn/taskit
 
 go 1.18
 

@@ -4,9 +4,7 @@ const MathjaxModule = require("mathjax");
 
 let MathJax = null;
 module.exports = {
-  /**
-   * Funktion zur Bearbeitung von Aufrufen an den API-Endpunkt der Cloud-Funktion.
-   */
+    // Funktion zur Bearbeitung von Aufrufen an den API-Endpunkt der Cloud-Funktion.
   async handler(event, context) {
     if (
       !event.queryStringParameters ||
