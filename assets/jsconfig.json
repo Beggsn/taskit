@@ -3,7 +3,7 @@
   "baseUrl": ".",
   "paths": {
    "*": [
-    "..\\_vendor\\github.com\\hugoinaction\\AcmeSearchSupport\\assets\\*",
+    "..\\..\\..\\..\\Users\\bcetin\\AppData\\Local\\Temp\\hugo_cache\\modules\\filecache\\modules\\pkg\\mod\\github.com\\hugoinaction\\!acme!search!support@v0.0.0-20210730045221-af26e7a540c3\\assets\\*",
     "..\\themes\\taskitTheme\\assets\\*"
    ]
   }
