@@ -21,5 +21,4 @@ module:
         - source: assets
           target: assets
     - path: github.com/hugoinaction/AcmeSearchSupport
-    - path: github.com/Beggsn/taskit
 
