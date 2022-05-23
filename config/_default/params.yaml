@@ -5,3 +5,6 @@ copyright: "Copyright &copy; 2022 Taskit."
 FormspreeCommentForm: mknykzqr
 NetlifyCommentForm: 5f6af880fd7ebf0007984d2f # testweise !!!!
 RemoveFormOnSubmission: true
+Latex2Svg: http://localhost:3000/latex2svg
+Latex2Svg: https://taskit-berkant.herokuapp.com/latex2svg
+Latex2Svg: https://taskitlandingpage/.netlify/functions/latex2svg  

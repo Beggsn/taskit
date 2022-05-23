@@ -6,6 +6,14 @@ tags: [manufacturing]
 categories: [circle, manufacturing]
 ---
 
+
+Gleichung 
+-------- 
+
+{{<latex>}}\text{Area} = \pi r^2{{</latex>}}
+
+
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor sodales erat, vel fermentum leo suscipit ut. Proin id porttitor lectus. Aenean varius quam justo, sed bibendum eros suscipit a. Praesent molestie, nibh ac interdum bibendum, diam tellus porta nisl, et aliquam velit augue eu felis. Sed vel tincidunt metus. Donec lacinia maximus ultricies. Fusce pulvinar maximus nisi. Phasellus varius et arcu a egestas. Curabitur quis egestas ligula, eu tincidunt erat.
 
 * Sed massa elit, dignissim a tellus a, dignissim tempor neque. Duis sed odio ligula. Suspendisse potenti. 

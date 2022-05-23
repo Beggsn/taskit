@@ -5,6 +5,14 @@ tags: [manufacturing, shape]
 categories: [manufacturing, Development]
 ---
 
+Gleichung
+--------
+
+{{<latex>}}
+\mathbf {B} (t)=\sum _{i=0}^{n}{n \choose i}(1-t)^{n-i}t^{i}\mathbf {P} _{i}
+{{</latex>}}
+
+
 Suspendisse porttitor nunc eros, vitae elementum arcu consequat sit amet. Maecenas id lacus vel arcu egestas maximus. Quisque iaculis orci sed pharetra molestie. Mauris fringilla ultricies orci non accumsan. Cras ut eros at leo lacinia placerat. Maecenas vitae elit tortor. Sed nisi turpis, iaculis sit amet sem sed, scelerisque elementum magna. Cras quis augue vel velit bibendum feugiat bibendum in nibh. Nullam sodales quis ligula sit amet ultricies.
 
 Nulla facilisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam placerat urna diam, eu elementum massa iaculis sed. Phasellus tincidunt sapien aliquet justo accumsan sodales. Etiam eu augue vel mi tempor porttitor. Mauris tristique eu est quis vehicula. Phasellus et venenatis orci. Etiam ipsum odio, pellentesque a volutpat condimentum, faucibus at ligula. Praesent posuere ullamcorper risus non aliquet. Nulla suscipit, metus vel ultrices commodo, elit lorem volutpat dui, a iaculis libero orci id tellus. Fusce euismod magna non nisl feugiat blandit. Sed ullamcorper ante risus, vel venenatis ex egestas sit amet.
