@@ -30,8 +30,8 @@ jobs:
 
       - name: Build
         run: hugo --minify --baseURL=https://github.com/Beggsn/taskitRebuild
-        #env:
-        #  COMMENTS_TOKEN: ${{ secrets.COMMENTS_TOKEN }}
+        env:
+          COMMENTS_TOKEN: ${{ secrets.COMMENTS_TOKEN }}
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
