@@ -2,4 +2,5 @@ enableInlineShortcodes: true
 funcs:
   getenv:
     - NETLIFY
-    - COMMENTS_TOKEN 
+    - COMMENTS_TOKEN
+    - LATEX2SVG_PASSWORD 

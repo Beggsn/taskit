@@ -1,0 +1,23 @@
+{{/*  ein boolescher Wert, der angibt, ob die Mathematik im Anzeigemodus oder
+im Inline-Modus erfolgt */}}
+
+
+{{/*  Richtet die Parameter mit sinnvollen Voreinstellungen ein  */}}
+{{ $display := true }}
+
+{{ with .Get "display" }}{{ $display = . }}{{ end }}
+
+{{/*  Verweigert den Aufruf des Servers, wenn es kein LATEX2SVG_PASSWORD gibt
+    oder der Endpunkt nicht definiert ist  */}}
+{{ if (and site.Params.Latex2Svg
+            
+        (getenv "LATEX2SVG_PASSWORD") ) }}
+{{ $json := getJSON site.Params.Latex2Svg "?" 
+    (querify "tex" .Inner) 
+    "&password=" (getenv "LATEX2SVG_PASSWORD") 
+    "&display=" $display}}
+{{ with $json.data }}
+{{/*  bettet die Daten ein, ohne den SVG-Inhalt inline zu escapen  */}}
+{{. | safeHTML}}
+{{ end }}
+{{ end }}
