@@ -1,10 +1,10 @@
-name: Taskit pages
+name: taskit pages
 
 on:
   push:
     branches:
       - master
-  workflow_dispatch:
+  workflow_dispatch: # Bleibt leer. Kann bei Bedarf Parameter enthalten.
 
 jobs:
   deploy:
@@ -29,7 +29,7 @@ jobs:
         run: npm i    
 
       - name: Build
-        run: hugo --minify --baseURL=https://hugoinaction.github.io/GitHubPagesNpm
+        run: hugo --minify --baseURL=https://github.com/Beggsn/taskitRebuild
         #env:
         #  COMMENTS_TOKEN: ${{ secrets.COMMENTS_TOKEN }}
 
