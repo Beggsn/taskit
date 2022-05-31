@@ -137,7 +137,7 @@ Embedded HTML: x<sup>2</sup>
 
 Floating image via HTML: <img src="/image/logo.png" style="float: right; padding: 0 0 0 10px"> Follow up text after the image. This honors the floats and wraps around the image, automatically going into the next line.
 
-## Tables, code blocks and task lists
+## Tabellen, Codeblöcke und Aufgabenlisten
 
    Name | Job
 --------|------
@@ -146,7 +146,7 @@ Floating image via HTML: <img src="/image/logo.png" style="float: right; padding
    Gabby| Technical Writer
 
 
-### Alternate table
+### Alternativer Tabelle
 
 
 |  Name | Mantra |
@@ -155,7 +155,7 @@ Floating image via HTML: <img src="/image/logo.png" style="float: right; padding
 | Bob   | Play it safe. |
 | Gabby | Try everything, but do what you like. |
 
-### Table alignment
+### Ausrichtung der Tabelle
 
 | Index |  Product | Edges |
 | --:   |  :--  | :-: |
